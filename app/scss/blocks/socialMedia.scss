@@ -1,0 +1,21 @@
+.socialMedia {
+  max-height: 80px;
+  width: 173px;
+  display: flex;
+  align-content: center;
+  > a {
+    display: flex;
+  }
+  svg {
+    color: $main-color;
+    width: 100%;
+    max-width: 27px;
+    margin-right: 12px;
+    &:hover {
+      color: $hover-color;
+    }
+    &:active {
+      color: $active-color;
+    }
+  }
+}

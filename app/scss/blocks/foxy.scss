@@ -1,0 +1,46 @@
+.foxy {
+  width: 300px;
+  height: auto;
+  display: block;
+  a {
+    display: block;
+    width: 300px;
+    min-height: 250px;
+    height: auto;
+  }
+}
+.foxyLong {
+  max-width: 728px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  a {
+    width: 100%;
+    height: 90px;
+    display: block;
+  }
+}
+
+.foxyFull {
+  max-width: 1280px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  a {
+    width: 100%;
+    height: 148px;
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .foxyLong {
+    margin: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .foxy {
+    margin: auto;
+  }
+}

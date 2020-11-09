@@ -1,0 +1,29 @@
+.horizontalBar {
+  > div {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+   a {
+    display: flex;
+    flex-direction: row;
+     > div {
+       border-radius: 5px;
+       flex: 0 0 36%;
+       max-width: 36%;
+       margin-right: 11px;
+     }
+   }
+    img {
+      border-radius: 5px;
+    }
+    span {
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+    }
+  }
+   div:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,40 @@
+.arrowSwitch {
+  cursor: pointer;
+  width: 52px;
+  height: 33px;
+  border: 1px solid #EEEEEE;
+  position: relative;
+  border-radius: 5px;
+  svg {
+    width: 34%;
+    height: 100%;
+    color: $main-color;
+    display: flex;
+    margin: 0 auto;
+  }
+  &:hover {
+    background-color: $main-color;
+    svg {
+      color: white;
+    }
+  }
+  &:active {
+    background-color: rgba($main-color, .12);
+    svg {
+      color: black;
+    }
+  }
+}
+
+.arrowSwitchLeft {
+  margin-right: 5px;
+  svg {
+    transform: rotate(90deg);
+  }
+}
+.arrowSwitchRight {
+  svg {
+
+    transform: rotate(270deg);
+  }
+}

@@ -1,0 +1,48 @@
+@import "blocks/vars";
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.container {
+  max-width: 1280px;
+  //width: 100%;
+}
+
+a {
+  color: black;
+  &:hover {
+    color: $main-color;
+  }
+  &:active {
+    color: $active-href;
+    text-decoration: none;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  color: black;
+}
+
+*{
+  transition-duration: .5s;
+  font-size: $font-size;
+  font-family: 'Roboto', sans-serif;
+  line-height: $line-height;
+}
+
+@import "blocks/header";
+@import "blocks/mainPageWrapper-part1";
+@import "blocks/mainPageWrapper-part2";
+@import "blocks/arrowSwitch";
+@import "blocks/horizontalBar";
+@import "blocks/categoryBlock";
+@import "blocks/foxy";
+@import "blocks/socialMedia";
+@import "blocks/imgBlock";
+@import "blocks/dateAndViews";
+@import "blocks/tags";
+@import "blocks/titles";
+@import "blocks/footer";
