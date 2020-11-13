@@ -1,0 +1,41 @@
+.sliderMini {
+  grid-area: centerArea;
+  display: flex;
+  overflow: hidden;
+  &__SlideArrows {
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    right: 31px;
+    top: 31px;
+    span {
+      border: none;
+      background-color: rgba(255, 255, 255, 0.38);
+    }
+  }
+  &__Slide {
+    position: relative;
+    display: flex;
+    height: 100%;
+    border-radius: 5px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    &:hover{
+      text-decoration: none;
+    }
+    > div:not(.mainPageWrapper-part4__centerSlideArrows) {
+      display: flex;
+      flex-direction: column;
+      align-self: flex-end;
+      margin: 0 23px 27px 26px;
+      color: white;
+
+    }
+    &Text {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 12px;
+    }
+  }
+}

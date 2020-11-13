@@ -1,0 +1,17 @@
+.pagination {
+  a {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 23px;
+    color: rgba(0, 0, 0, 0.38);
+    padding: 10px;
+    margin: 0 10px;
+    &:hover {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      text-decoration: none;
+    }
+  }
+  a.active {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.38);
+  }
+}

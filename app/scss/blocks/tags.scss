@@ -1,14 +1,14 @@
 .tags {
+  display: block !important;
   a {
+    margin-bottom: 5px;
     border: 1px solid $main-color;
     border-radius: 5px;
     font-weight: normal;
     font-size: 12px;
     line-height: 16px;
     margin-right: 3px;
-    margin-bottom: 10px;
     display: inline-flex;
-    border-radius: 5px;
     padding: 3px 10px;
     color: rgba(0, 0, 0, 0.38);
     &:hover {
@@ -20,5 +20,11 @@
       background-color: rgba(black, .12);
       color: white;
     }
+  }
+}
+
+@media (max-width: 576px) {
+  .tags a {
+    margin-bottom: 5px;
   }
 }

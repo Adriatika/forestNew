@@ -1,0 +1,89 @@
+.mainPageWrapper-part6 {
+  background-color: $main-color38;
+  padding: 45px 0;
+  &__slider {
+    &Top {
+      display: flex;
+      justify-content: space-between;
+    }
+    &Bot {
+      .swiper-slide {
+        box-shadow: 0px 0.4px 0.8px rgba(0, 0, 0, 0.1), 0px 3px 6px rgba(0, 0, 0, 0.2);
+        background-color: white;
+        padding: 33px 23px;
+        border-radius: 5px;
+        > div:first-child {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+          > div {
+            flex: 0 0 47%;
+            color: rgba(0, 53, 37, 0.87);
+          }
+          .imgBlock {
+            border-radius: 50%;
+            padding-top: 46.6%;
+          }
+          > div:last-child {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            p {
+              color: rgba(0, 53, 37, 0.87);
+            }
+            p:first-child {
+              font-weight: 500;
+              font-size: 10px;
+              line-height: 16px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+            }
+            p:last-child {
+              font-weight: normal;
+              font-size: 9px;
+              line-height: 12px;
+              margin-bottom: 0;
+            }
+          }
+        }
+        > div:last-child {
+          p {
+            color: $dark-theme;
+          }
+          p:first-of-type {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+          }
+          p:last-of-type {
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+          }
+          > div {
+            justify-content: space-between;
+            a {
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 20px;
+              color: $main-color;
+              text-decoration: underline;
+            }
+            .date {
+              display: flex;
+              margin: auto 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .mainPageWrapper-part6 {
+    &__sliderTopRight {
+      display: none;
+    }
+  }
+}

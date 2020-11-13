@@ -1,0 +1,53 @@
+.mainPageWrapper-part4 {
+  margin-bottom: $wrapper-parts-margin;
+  display: grid;
+  column-gap: 20px;
+  grid-template:
+    "leftArea centerArea rightArea"
+    "foxyArea foxyArea foxyArea"
+    /  4.5fr 4fr 3fr
+;
+  .calendarOfEvents {
+    grid-area: leftArea;
+  }
+
+  .quiz {
+    grid-area: rightArea;
+  }
+
+  &__foxy {
+    margin-top: 40px;
+    grid-area: foxyArea;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainPageWrapper-part4 {
+    grid-template:
+    "centerArea rightArea"
+    "foxyArea foxyArea"
+    /4.5fr 4fr
+  ;
+    .calendarOfEvents {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .mainPageWrapper-part4 {
+    row-gap: 30px;
+    grid-template:
+    "centerArea"
+    "rightArea"
+    "foxyArea"
+    /1fr
+  ;
+    .sliderMini {
+      min-height: 300px;
+    }
+    &__foxy {
+      margin-top: 0;
+    }
+  }
+}

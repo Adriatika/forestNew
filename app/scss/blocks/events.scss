@@ -1,0 +1,240 @@
+.events {
+  column-gap: 30px;
+  display: grid;
+  align-items: start;
+  grid-template:
+    "breadcrumbs breadcrumbs breadcrumbs foxyOne"
+    "one one one foxyOne"
+    "one one one news"
+    "one one one news"
+    "two two two newMag"
+    "sliderOne sliderOne sliderOne foxyTwo"
+    "foxyFullOne foxyFullOne foxyFullOne foxyFullOne"
+    "h2Title h2Title h2Title foxyThree"
+    "verticalOne verticalTwo verticalThree foxyThree"
+    "verticalOne verticalTwo verticalThree quiz"
+    "verticalOne verticalTwo verticalThree foxyFour"
+    "verticalFour verticalFive verticalSix foxyFour"
+    "verticalFour verticalFive verticalSix anotherNews"
+    "pagination pagination pagination foxyFive"
+    "sliderTwo sliderTwo sliderTwo foxyFive"
+    "foxyFullTwo foxyFullTwo foxyFullTwo foxyFullTwo"
+    "sliderThree sliderThree sliderThree sliderThree"
+    "foxyLong foxyLong foxyLong foxyLong"
+    / 1fr 1fr 1fr 1fr
+;
+  > div, > h2 {
+    margin-top: 25px;
+  }
+  .horizontalBar1, .horizontalBar2 {
+    .imgBlock {
+      flex: 0 0 29%;
+      max-width: 29%;
+      margin-right: 20px;
+      padding-top: 21.6%;
+    }
+    > div {
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      > div {
+        max-width: 80%;
+      }
+    }
+  }
+  .horizontalBar1 {
+    grid-area: one;
+  }
+  .horizontalBar2 {
+    margin-top: 0;
+    grid-area: two;
+  }
+  .breadcrumbs {
+    grid-area: breadcrumbs;
+  }
+  .foxyOne {
+    grid-area: foxyOne;
+  }
+  .foxyTwo {
+    grid-area: foxyTwo;
+  }
+  .foxyThree {
+    grid-area: foxyThree;
+  }
+  .foxyFour {
+    grid-area: foxyFour;
+  }
+  .foxyFive {
+    grid-area: foxyFive;
+  }
+  .readersChoise {
+    grid-area: news;
+  }
+  .newMag{
+    grid-area: newMag;
+  }
+  .movingPicturesOne {
+    grid-area: sliderOne;
+  }
+  .movingPicturesTwo {
+    grid-area: sliderTwo;
+  }
+  .movingPicturesBigOne {
+    grid-area: sliderThree;
+  }
+  .foxyFullOne {
+    grid-area: foxyFullOne;
+  }
+  .foxyFullTwo {
+    grid-area: foxyFullTwo;
+  }
+  .verticalBlock {
+    a:hover {
+      text-decoration: none;
+    }
+    .dateAndViews {
+      margin-bottom: 15px;
+    }
+  }
+  .verticalBlock1 {
+    grid-area: verticalOne;
+  }
+  .verticalBlock2 {
+    grid-area: verticalTwo;
+  }
+  .verticalBlock3 {
+    grid-area: verticalThree;
+  }
+  .verticalBlock4 {
+    grid-area: verticalFour;
+  }
+  .verticalBlock5 {
+    grid-area: verticalFive;
+  }
+  .verticalBlock6 {
+    grid-area: verticalSix;
+  }
+  .pagination {
+    margin: 0;
+    grid-area: pagination;
+  }
+  .h2Title {
+    grid-area: h2Title;
+  }
+  .quiz {
+    grid-area: quiz;
+  }
+  .anotherNews {
+    grid-area: anotherNews;
+  }
+  .foxyLong {
+    margin-top: 45px;
+    grid-area: foxyLong;
+  }
+}
+
+@media (max-width: 1024px) {
+  .events {
+    align-items: center;
+    grid-template:
+    "breadcrumbs breadcrumbs breadcrumbs foxyOne"
+    "one one one foxyOne"
+    "one one one newMag"
+    "two two two newMag"
+    "two two two foxyTwo"
+    "sliderOne sliderOne sliderOne sliderOne"
+    "foxyFullOne foxyFullOne foxyFullOne foxyFullOne"
+    "h2Title h2Title h2Title foxyThree"
+    "verticalOne verticalTwo verticalThree foxyThree"
+    "verticalOne verticalTwo verticalThree quiz"
+    "verticalOne verticalTwo verticalThree foxyFour"
+    "verticalFour verticalFive verticalSix foxyFour"
+    "verticalFour verticalFive verticalSix anotherNews"
+    "pagination pagination pagination foxyFive"
+    "sliderTwo sliderTwo sliderTwo foxyFive"
+    "foxyFullTwo foxyFullTwo foxyFullTwo foxyFullTwo"
+    "sliderThree sliderThree sliderThree sliderThree"
+    "foxyLong foxyLong foxyLong foxyLong"
+    / 1fr 1fr 1fr 1fr
+  ;
+    .readersChoise {
+      display: none;
+    }
+    .foxyTwo {
+      margin: auto;
+    }
+    .horizontalBar1, .horizontalBar2 {
+      > div {
+        > div {
+          max-width: 100%;
+        }
+      }
+    }
+
+  }
+}
+
+@media (max-width: 900px) {
+  .events {
+    align-items: center;
+    row-gap: 30px;
+    grid-template:
+    "breadcrumbs"
+    "one"
+    "foxyFullOne"
+    "two"
+    "foxyOne"
+    "sliderOne"
+    "foxyFullTwo"
+    "news"
+    "foxyTwo"
+    "h2Title"
+    "verticalOne"
+    "foxyThree"
+    "newMag"
+    "foxyFour"
+    "verticalTwo"
+    "verticalThree"
+    "pagination"
+    "foxyFive"
+    "sliderTwo"
+    "foxyLong"
+    / 1fr
+  ;
+    > div:not(.foxy) {
+      margin: 0;
+    }
+    .readersChoise {
+      display: block;
+    }
+    .foxy {
+      margin: auto;
+    }
+    .verticalBlock4, .verticalBlock5, .verticalBlock6, .movingPicturesThree, .quiz, .anotherNews {
+      display: none;
+    }
+    .pagination {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .events {
+    .tags {
+      display: none !important;
+    }
+    .horizontalBarFirst.imgBlock {
+      display: none;
+    }
+    .horizontalBar__Right {
+      > span {
+        margin-bottom: 10px;
+      }
+    }
+    .movingPicturesTopLeft {
+      display: none;
+    }
+
+  }
+}

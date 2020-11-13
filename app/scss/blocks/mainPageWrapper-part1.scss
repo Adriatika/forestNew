@@ -1,9 +1,9 @@
 .mainPageWrapper-part1 {
-  margin-bottom: 30px;
+  margin-bottom: $wrapper-parts-margin;
 
   .horizontalBar {
     .imgBlock {
-      padding-top: 22.6%;
+      //padding-top: 22.6%;
     }
   }
 
@@ -23,7 +23,6 @@
       margin: 0 23px 27px 26px;
       color: white;
       > div {
-
         .mainPageWrapper-part1__centerCategory {
           float: right;
           color: rgba(white, .6);
@@ -42,6 +41,7 @@
         margin-bottom: 12px;
       }
       .dateAndViews {
+        display: block;
         span {
           color: white;
         }
@@ -116,74 +116,6 @@
     }
   }
 
-  &__slider {
-    margin-top: $mainPageWrapper__slider;
-    .swiper-slide {
-      > a {
-
-        img {
-          border-radius: 5px;
-          margin-bottom: 10px;
-        }
-      }
-    }
-    .categoryBlock {
-      font-size: 12px;
-      line-height: 16px;
-    }
-    &Title {
-      display: flex;
-      margin-top: 7px;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 20px;
-    }
-    &Top {
-      display: flex;
-      justify-content: space-between;
-      &Left {
-        border: 1px solid #EEEEEE;
-        border-radius: 5px;
-        display: inline-flex;
-        margin-bottom: 13px;
-        a {
-          font-weight: 500;
-          font-size: 10px;
-          line-height: 16px;
-          letter-spacing: 1.5px;
-          text-transform: uppercase;
-          padding: 9px 15px;
-          &:hover {
-            text-decoration: none;
-          }
-        }
-        a:first-child {
-          border-radius: 5px 0 0 5px;
-          background-color: $main-color;
-          color: white;
-          &:hover {
-            background-color: rgba(56, 173, 74, 0.38);
-            color: black;
-          }
-          &:active {
-            background-color: rgba(0, 0, 0, 0.12);
-            color: rgba(black, .38);
-          }
-        }
-        a:last-child {
-          border-radius: 0 5px 5px 0;
-        }
-      }
-
-      &Right {
-        display: inline-flex;
-        span {
-          border-radius: 0;
-        }
-      }
-    }
-  }
-
   &__RightLower {
     display: flex;
     align-items: center;
@@ -192,69 +124,6 @@
   &__foxyBlock {
     margin-top: 21px;
   }
-
-  &__rubricatorTitle {
-    margin-top: 21px;
-    span {
-      position: relative;
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 36px;
-      color: rgba(0, 53, 37, 0.87);
-      border: 2px solid $main-color;
-      border-radius: 5px 5px 0 5px;
-      display: block;
-      width: 100%;
-      padding: 8px 14px;
-      &:after {
-        content: '';
-        border: 18px solid $main-color;
-        border-left-color: white;
-        border-radius: 6px 0 0 0;
-        border-bottom-color: white;
-        position: absolute;
-        top: 100%;
-        right: -2px;
-        z-index: 1;
-      }
-      &:before {
-        content: '';
-        border: 16px solid white;
-        border-left: 16px solid transparent;
-        border-bottom: 16px solid transparent;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        z-index: 2;
-      }
-    }
-  }
-
-  &__rubricator {
-    margin-top: 20px;
-
-    ul {
-      border-top: 1px solid rgba(0, 0, 0, 0.12);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-      column-count: 5;
-      column-gap: 10px;
-      margin-bottom: 0;
-      list-style: none;
-      padding: 25px 0;
-      li {
-        margin: 0;
-        padding: 0;
-        a {
-          font-weight: 500;
-          font-size: 10px;
-          line-height: 16px;
-          letter-spacing: 1.5px;
-          text-transform: uppercase;
-          color: rgba(0, 53, 37, 0.87);
-        }
-      }
-    }
-  }
 }
 
 @media (max-width: 1024px) {
@@ -262,10 +131,10 @@
     &__right {
       display: none;
     }
-    &__rubricatorTitle {
+    .rubricatorTitle {
       display: none;
     }
-    &__rubricator {
+    .rubricator {
       display: none;
     }
     &__foxyBlock {
@@ -280,7 +149,7 @@
     &__RightLower {
       padding-left: 0;
     }
-    &__sliderTopRight {
+    .movingPicturesTopRight {
       display: none;
     }
   }
@@ -344,7 +213,7 @@
     &__foxyBlock {
       order: 5;
     }
-    &__slider {
+    .movingPictures {
       order: 6;
       &TopLeft {
         width: 100%;
@@ -372,7 +241,7 @@
         display: none;
       }
     }
-    &__slider {
+    .movingPictures {
       &TopLeft {
         a {
           width: auto;

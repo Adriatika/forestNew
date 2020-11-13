@@ -1,0 +1,16 @@
+.anotherNews {
+  .horizontalBar {
+    a {
+      margin-bottom: 10px;
+    }
+    span {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .dateAndViews {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.verticalBlock {
+  .dateAndViews {
+    margin-top: 10px;
+  }
+  &__ImgBlc {
+    img {
+      border-radius: 5px;
+    }
+    span {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 16px;
+      letter-spacing: 1.5px;
+      color: white;
+      position: absolute;
+      top: 0;
+      background-color: $main-color;
+      padding: 8px 20px;
+      border-radius: 0 5px 5px 5px;
+      &:before {
+        content: '';
+        border: 10px solid $main-color;
+        border-left-color: white;
+        border-radius: 6px 0 0 0;
+        border-bottom-color: white;
+        position: absolute;
+        top: 0;
+        right: 100%;
+      }
+    }
+  }
+  &__TextBlc {
+    p:first-child {
+      margin-top: 24px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+    }
+    p:last-child {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .tags {
+    display: block;
+    a {
+      margin-bottom: 5px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.quiz {
+  position: relative;
+  background-color: $main-color38;
+  padding: 15% 5% 10% 13%;
+  color: rgba(0, 53, 37, 0.87);
+  border-radius: 5px;
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  li:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 40px;
+  }
+
+  &:before {
+    content: '';
+    background: url("../img/questionMark.png") no-repeat;
+    z-index: 2;
+    position: absolute;
+    width: 40%;
+    height: 65%;
+    bottom: 0;
+    right: 20px;
+  }
+}

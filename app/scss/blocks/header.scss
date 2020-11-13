@@ -134,15 +134,20 @@ header {
     font-weight: 500;
     font-size: 13px;
     letter-spacing: 0.01em;
+    text-align: center;
   }
   &__row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(9, auto);
     list-style-type: none;
     padding: 0;
-    justify-content: space-between;
+
     margin-bottom: 0;
-    li.nav-item {
-      //padding: 0 3px;
+    li {
+      border-left: 1px solid white;
+    }
+    li:last-of-type {
+      border-right: 1px solid white;
     }
     li:hover {
       color: white;
@@ -195,14 +200,6 @@ header {
     height: 7px;
     display: inline-flex;
     align-items: center;
-  }
-}
-
-@media (max-width: 1200px) {
-  .menu {
-    .whiteStick {
-      height: 64px;
-    }
   }
 }
 
@@ -264,9 +261,6 @@ header {
     }
   }
   .menu {
-    .whiteStick {
-      display: none;
-    }
     display: none;
   }
 }

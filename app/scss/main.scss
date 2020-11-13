@@ -2,8 +2,7 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 
 .container {
-  max-width: 1280px;
-  //width: 100%;
+  max-width: 1310px;
 }
 
 a {
@@ -23,6 +22,7 @@ img {
 }
 
 body {
+  position: relative;
   color: black;
 }
 
@@ -36,13 +36,40 @@ body {
 @import "blocks/header";
 @import "blocks/mainPageWrapper-part1";
 @import "blocks/mainPageWrapper-part2";
+@import "blocks/mainPageWrapper-part3";
+@import "blocks/mainPageWrapper-part4";
+@import "blocks/mainPageWrapper-part5";
+@import "blocks/mainPageWrapper-part6";
+@import "blocks/mainPageWrapper-part7";
+@import "blocks/partnersSlider";
+@import "blocks/mainPageWrapper-part9";
+@import "blocks/readersChoise";
+@import "blocks/listedUp";
+@import "blocks/pagination";
+@import "blocks/movingPictures";
+@import "blocks/modalSubscription";
+@import "blocks/rubric";
+@import "blocks/rubricator";
+@import "blocks/button";
+@import "blocks/socialBlock";
+@import "blocks/inputBlock";
 @import "blocks/arrowSwitch";
+@import "blocks/greenBlock";
+@import "blocks/sliderMini";
+@import "blocks/calendarOfEvents";
 @import "blocks/horizontalBar";
 @import "blocks/categoryBlock";
+@import "blocks/anotherNews";
 @import "blocks/foxy";
+@import "blocks/news";
+@import "blocks/quiz";
 @import "blocks/socialMedia";
+@import "blocks/verticalBlock";
+@import "blocks/newMag";
 @import "blocks/imgBlock";
 @import "blocks/dateAndViews";
+@import "blocks/events";
+@import "blocks/breadcrumbs";
 @import "blocks/tags";
 @import "blocks/titles";
 @import "blocks/footer";

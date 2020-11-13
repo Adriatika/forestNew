@@ -3,15 +3,23 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     padding-bottom: 5px;
     margin-bottom: 8px;
-   a {
-    display: flex;
-    flex-direction: row;
-     > div {
-       border-radius: 5px;
-       flex: 0 0 36%;
-       max-width: 36%;
-       margin-right: 11px;
-     }
+    > a, > div {
+      display: flex;
+      flex-direction: row;
+      .horizontalBarFirst {
+         border-radius: 5px;
+         flex: 0 0 33%;
+         max-width: 33%;
+          img {
+            margin-right: 11px;
+          }
+         margin-right: 11px;
+       }
+       .horizontalBar__Right {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+       }
    }
     img {
       border-radius: 5px;
@@ -22,8 +30,28 @@
       align-items: center;
     }
   }
-   div:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
+  &__Right > a{
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+   > div:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .horizontalBar {
+    div:last-child {
+      border: none;
+      margin-bottom: 0;
+    }
+    > div {
+      span {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
   }
 }

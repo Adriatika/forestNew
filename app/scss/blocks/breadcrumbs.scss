@@ -1,0 +1,22 @@
+.breadcrumbs {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  .h2Title {
+    margin-bottom: 10px;
+  }
+  > div {
+    span {
+      color: rgba(0, 0, 0, 0.38);
+    }
+    a, span {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    a:not(:last-child) {
+      color: rgba(0, 0, 0, 0.38);
+    }
+    a:last-child {
+      color: rgba(0, 53, 37, 0.87);
+    }
+  }
+}

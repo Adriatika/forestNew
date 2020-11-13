@@ -1,0 +1,27 @@
+.listedUp {
+  cursor: pointer;
+  position: fixed;
+  background-color: $main-color;
+  top: 60%;
+  right: 5px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  z-index: 3;
+  svg {
+    margin: auto;
+    display: flex;
+    height: 100%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .listedUp {
+    right: 12%;
+  }
+}
+@media (max-width: 1024px) {
+  .listedUp {
+    display: none;
+  }
+}

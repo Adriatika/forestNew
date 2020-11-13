@@ -1,0 +1,30 @@
+.partners-slider {
+  &__sliderTop {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__sliderBot {
+    .swiper-slide {
+      .imgBlock {
+        margin-bottom: 35px;
+      }
+      > div:last-child {
+        p {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 28px;
+        }
+        span {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mainPageWrapper-part8 {
+    display: none;
+  }
+}

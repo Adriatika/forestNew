@@ -1,0 +1,40 @@
+.button {
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 6px 30px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  border: none;
+  box-shadow: 0px 0.3px 0.5px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.2);
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.button.buttonGreen {
+  color: white;
+  background-color: $main-color;
+  &:hover {
+    background-color: white;
+    color: rgba($main-color, .87);
+  }
+  &:active {
+    background-color: $main-color12;
+    color: rgba(black, .38);
+  }
+}
+
+.button.buttonWhite {
+  color: $main-color;
+  background-color: white;
+  &:hover {
+    background-color: $main-color;
+    color: white;
+  }
+  &:active {
+    background-color: $main-color12;
+    color: rgba(black, .38);
+  }
+}

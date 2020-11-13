@@ -1,0 +1,72 @@
+.inputBlockRadio {
+  position: relative;
+  display: flex;
+  input {
+    display: none;
+  }
+  label {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    &:before {
+      content: " ";
+      display: inline-block;
+      position: relative;
+      top: 5px;
+      margin: 0 10px 0 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 11px;
+      border: 2px solid $main-color;
+      background-color: transparent;
+    }
+  }
+  input[type=radio]:checked + label:after {
+    border-radius: 11px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 9px;
+    left: 4px;
+    content: " ";
+    display: block;
+    background: $main-color;
+  }
+}
+
+.inputBlockCheckbox {
+  position: relative;
+  display: flex;
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: inline-flex;
+    align-self: center;
+  }
+  label {
+    display: flex;
+    margin: 0 0 0 10px;
+  }
+  input+label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 2px solid rgba(0, 0, 0, 0.12);;
+    margin-right: 15px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    align-self: center;
+  }
+  input:checked+label::before {
+    background-image: url("../img/checked.svg");
+    background-size: 100%;
+  }
+}
+

@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-
+    <link rel="stylesheet" href="style/fonts.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/swiper.css">
-    <link rel="stylesheet" href="style/fonts.css">
-    <script src="js/app.min.js"></script>
-    <script src="js/swiper.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
 </head>
@@ -122,39 +119,30 @@
     <div class="menu ">
         <div class="container">
             <ul class="menu__row">
-                <li class="whiteStick"></li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">НОВОСТИ</a>
                 </li>
-                <li class="whiteStick"></li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">В ЦЕНТРЕ ВНИМАНИЯ</a>
                 </li>
-                <li class="whiteStick"></li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">РЫНОК</a>
                 </li>
-                <li class="whiteStick"></li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">ТЕХНОЛОГИИ</a>
                 </li>
-                <li class="whiteStick"></li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">ВЗГЛЯД ИЗНУТРИ</a>
                 </li>
-                <li class="whiteStick"></li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">АНАЛИТИКА</a>
                 </li>
-                <li class="whiteStick"></li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">КРУПНЫМ ПЛАНОМ</a>
                 </li>
-                <li class="whiteStick"></li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">МЕРОПРИЯТИЯ</a>
                 </li>
-                <li class="whiteStick"></li>
                 <li class="nav-item dropdown"  onclick="openDrop('.top_drop')">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         СПЕЦПРОЕКТЫ
@@ -165,7 +153,6 @@
                         <a class="dropdown-item" href="#">СДЕЛАНО В РОССИИ</a>
                     </div>
                 </li>
-                <li class="whiteStick"></li>
             </ul>
         </div>
 
@@ -174,10 +161,10 @@
 
 <div class="container">
     <div class="row mainPageWrapper-part1">
-        <div class="col-12 col-md-5 col-lg-4 horizontalBar">
+        <div class="col-12 col-md-5 col-lg-4 mainPageWrapper-part1__left horizontalBar">
             <div>
                 <a href="#">
-                    <div class="imgBlock">
+                    <div class="imgBlock horizontalBarFirst">
                         <img src="https://picsum.photos/800/600?random=1">
                     </div>
                     <span>
@@ -187,7 +174,7 @@
             </div>
             <div>
                 <a href="#">
-                    <div class="imgBlock">
+                    <div class="imgBlock horizontalBarFirst">
                         <img src="https://picsum.photos/800/600?random=1">
                     </div>
                     <span>
@@ -197,7 +184,7 @@
             </div>
             <div>
                 <a href="#">
-                    <div class="imgBlock">
+                    <div class="imgBlock horizontalBarFirst">
                         <img src="https://picsum.photos/800/600?random=1">
                     </div>
                     <span>
@@ -207,7 +194,7 @@
             </div>
             <div>
                 <a href="#">
-                    <div class="imgBlock">
+                    <div class="imgBlock horizontalBarFirst">
                         <img src="https://picsum.photos/800/600?random=1">
                     </div>
                     <span>
@@ -217,7 +204,7 @@
             </div>
             <div>
                 <a href="#">
-                    <div class="imgBlock">
+                    <div class="imgBlock horizontalBarFirst">
                         <img src="https://picsum.photos/800/600?random=1">
                     </div>
                     <span>
@@ -393,10 +380,10 @@
 
         </div>
 
-        <div class="col-12 col-md-7 col-lg-8 col-xl-9 mainPageWrapper-part1__slider">
-            <div class="mainPageWrapper-part1__sliderTop">
-                <div class="mainPageWrapper-part1__sliderTopLeft">
-                    <a href="#">
+        <div class="col-12 col-md-7 col-lg-8 col-xl-9 movingPictures movingPicturesOne">
+            <div class="movingPicturesTop">
+                <div class="movingPicturesTopLeft">
+                    <a onclick="openModal()" class="openModal">
                         подписаться
                     </a>
                     <a href="#">
@@ -404,13 +391,13 @@
                     </a>
                 </div>
 
-                <div class="mainPageWrapper-part1__sliderTopRight">
-                    <span id="mainPageWrapper-part1__sliderTopArrowLeft" class="arrowSwitch arrowSwitchLeft">
+                <div class="movingPicturesTopRight">
+                    <span id="movingPicturesOneTopArrowLeft" class="arrowSwitch arrowSwitchLeft">
                          <svg role="img" >
                             <use href="img/icons.svg#i-arrowSwitch"/>
                          </svg>
                     </span>
-                    <span id="mainPageWrapper-part1__sliderTopArrowRight" class="arrowSwitch arrowSwitchRight">
+                    <span id="movingPicturesOneTopArrowRight" class="arrowSwitch arrowSwitchRight">
                          <svg role="img">
                             <use href="img/icons.svg#i-arrowSwitch"/>
                          </svg>
@@ -418,7 +405,7 @@
                 </div>
             </div>
 
-            <div class="swiper-container">
+            <div id="movingPicturesOne" class="swiper-container">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
@@ -430,7 +417,7 @@
                         </a>
                         <div>
                             <a class="categoryBlock" href="#">Учебный класс</a>
-                            <a class="mainPageWrapper-part1__sliderTitle" href="#">Макроэкономика и цены на круглое сырье</a>
+                            <a class="movingPicturesTitle" href="#">Макроэкономика и цены на круглое сырье</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -441,7 +428,7 @@
                         </a>
                         <div>
                             <a class="categoryBlock" href="#">Учебный класс</a>
-                            <a class="mainPageWrapper-part1__sliderTitle" href="#">Макроэкономика и цены на круглое сырье</a>
+                            <a class="movingPicturesTitle" href="#">Макроэкономика и цены на круглое сырье</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -452,7 +439,7 @@
                         </a>
                         <div>
                             <a class="categoryBlock" href="#">Учебный класс</a>
-                            <a class="mainPageWrapper-part1__sliderTitle" href="#">Макроэкономика и цены на круглое сырье</a>
+                            <a class="movingPicturesTitle" href="#">Макроэкономика и цены на круглое сырье</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -463,7 +450,7 @@
                         </a>
                         <div>
                             <a class="categoryBlock" href="#">Учебный класс</a>
-                            <a class="mainPageWrapper-part1__sliderTitle" href="#">Макроэкономика и цены на круглое сырье</a>
+                            <a class="movingPicturesTitle" href="#">Макроэкономика и цены на круглое сырье</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -474,7 +461,7 @@
                         </a>
                         <div>
                             <a class="categoryBlock" href="#">Учебный класс</a>
-                            <a class="mainPageWrapper-part1__sliderTitle" href="#">Макроэкономика и цены на круглое сырье</a>
+                            <a class="movingPicturesTitle" href="#">Макроэкономика и цены на круглое сырье</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -485,7 +472,7 @@
                         </a>
                         <div>
                             <a class="categoryBlock" href="#">Учебный класс</a>
-                            <a class="mainPageWrapper-part1__sliderTitle" href="#">Макроэкономика и цены на круглое сырье</a>
+                            <a class="movingPicturesTitle" href="#">Макроэкономика и цены на круглое сырье</a>
                         </div>
                     </div>
                 </div>
@@ -506,13 +493,13 @@
             </div>
         </div>
 
-        <div class="col-5 mainPageWrapper-part1__rubricatorTitle">
+        <div class="col-5 rubricatorTitle">
             <span>
                 Рубрикатор журнала “Лесной комплекс”
             </span>
         </div>
 
-        <div class="col-12 mainPageWrapper-part1__rubricator">
+        <div class="col-12 rubricator">
             <ul>
                 <li>
                     <a href="#">
@@ -593,20 +580,20 @@
         </div>
     </div>
 
-    <div class="row mainPageWrapper-part2">
-        <div class="col-12 col-xl-9">
-            <div class="mainPageWrapper-part2__green row">
-                <h2 class="col-12 h2Title">
+    <div class="mainPageWrapper-part2">
+        <div class="">
+            <div class="greenBlock">
+                <h2 class="h2Title">
                     Рынок
                 </h2>
-                <div class="col-12 col-lg-5 mainPageWrapper-part2__greenLeft">
+                <div class="greenBlock__Left">
                     <h2 class="h2Title">
                         Рынок
                     </h2>
                     <div class="horizontalBar">
                         <div>
                             <a href="#">
-                                <div class="imgBlock">
+                                <div class="imgBlock horizontalBarFirst">
                                     <img src="https://picsum.photos/800/600?random=1">
                                 </div>
                                 <span>
@@ -616,7 +603,7 @@
                         </div>
                         <div>
                             <a href="#">
-                                <div class="imgBlock">
+                                <div class="imgBlock horizontalBarFirst">
                                     <img src="https://picsum.photos/800/600?random=1">
                                 </div>
                                 <span>
@@ -626,7 +613,7 @@
                         </div>
                         <div>
                             <a href="#">
-                                <div class="imgBlock">
+                                <div class="imgBlock horizontalBarFirst">
                                     <img src="https://picsum.photos/800/600?random=1">
                                 </div>
                                 <span>
@@ -636,7 +623,7 @@
                         </div>
                         <div>
                             <a href="#">
-                                <div class="imgBlock">
+                                <div class="imgBlock horizontalBarFirst">
                                     <img src="https://picsum.photos/800/600?random=1">
                                 </div>
                                 <span>
@@ -646,7 +633,7 @@
                         </div>
                         <div>
                             <a href="#">
-                                <div class="imgBlock">
+                                <div class="imgBlock horizontalBarFirst">
                                     <img src="https://picsum.photos/800/600?random=1">
                                 </div>
                                 <span>
@@ -657,15 +644,15 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-lg mainPageWrapper-part2__greenRight">
-                    <a href="#" class="mainPageWrapper-part2__greenRightImgBlc">
+                <div class="verticalBlock">
+                    <a href="#" class="verticalBlock__ImgBlc">
                         <div class="imgBlock imgBlockFull">
                             <img src="https://picsum.photos/800/600?random=6">
                         </div>
                         <span>Новость часа</span>
                     </a>
 
-                    <a href="#" class="mainPageWrapper-part2__greenRightTextBlc">
+                    <a href="#" class="verticalBlock__TextBlc">
                         <p>
                             Ponsse расширяет сеть учебных классов в России
                         </p>
@@ -687,8 +674,1233 @@
                 </div>
             </div>
 
-            <div class="mainPageWrapper-part2__social">
-                <div class="socialMedia">
+            <div class="foxy">
+                <a href="#" style="background-image: url('img/foxy.png')">
+                </a>
+            </div>
+
+            <div class="anotherNews">
+                <h2 class="h2Title">
+                    Технологии
+                </h2>
+                <div class="horizontalBar">
+                    <div>
+                        <a  href="#">
+                            <div class="horizontalBarFirst imgBlock">
+                                <img src="https://picsum.photos/800/600?random=1">
+                            </div>
+                            <span>
+                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
+                                </span>
+                        </a>
+                        <div class="dateAndViews">
+                            <span class="date">11.11.2020</span>
+                            <span class="views">5454</span>
+                        </div>
+                    </div>
+                    <div>
+                        <a  href="#">
+                            <div class="horizontalBarFirst imgBlock">
+                                <img src="https://picsum.photos/800/600?random=1">
+                            </div>
+                            <span>
+                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
+                                </span>
+                        </a>
+                        <div class="dateAndViews">
+                            <span class="date">11.11.2020</span>
+                            <span class="views">5454</span>
+                        </div>
+                    </div>
+                    <div>
+                        <a  href="#">
+                            <div class="horizontalBarFirst imgBlock">
+                                <img src="https://picsum.photos/800/600?random=1">
+                            </div>
+                            <span>
+                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
+                                </span>
+                        </a>
+                        <div class="dateAndViews">
+                            <span class="date">11.11.2020</span>
+                            <span class="views">5454</span>
+                        </div>
+                    </div>
+                    <div>
+                        <a  href="#">
+                            <div class="horizontalBarFirst imgBlock">
+                                <img src="https://picsum.photos/800/600?random=1">
+                            </div>
+                            <span>
+                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
+                                </span>
+                        </a>
+                        <div class="dateAndViews">
+                            <span class="date">11.11.2020</span>
+                            <span class="views">5454</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="socialBlock">
+                <div>
+                    <div class="socialMedia">
+                        <a href="#">
+                            <svg class="" role="img" >
+                                <use href="img/icons.svg#i-vk"/>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg class="" role="img" >
+                                <use href="img/icons.svg#i-tube"/>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg class="" role="img" >
+                                <use href="img/icons.svg#i-fb"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <span>Следите за нами в соцсетях</span>
+                </div>
+                <div>
+                    <div class="socialMedia">
+                        <a href="#">
+                            <svg class="" role="img" >
+                                <use href="img/icons.svg#i-zen"/>
+                            </svg>
+                        </a>
+
+                    </div>
+                    <span>Читайте нас в Яндекс.Дзен</span>
+                </div>
+                <div>
+                    <div class="socialMedia">
+                        <a href="#">
+                            <svg class="" role="img" >
+                                <use href="img/icons.svg#i-help"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <span>Задайте вопрос редакции</span>
+                </div>
+            </div>
+
+            <div class="mainPageWrapper-part2__foxy">
+                <div class="foxyFull">
+                    <a href="#" style="background: url('https://picsum.photos/1280/148?random=5') no-repeat scroll center center / contain"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainPageWrapper-part3">
+        <div class="foxy">
+            <a href="#" style="background-image: url('img/foxy.png')">
+            </a>
+        </div>
+
+        <div class="mainPageWrapper-part3__center">
+            <h2 class="h2Title">Деревообработка</h2>
+
+            <div class="horizontalBar">
+                <div>
+                    <a href="#">
+                        <div class="horizontalBarFirst imgBlock">
+                            <img src="https://picsum.photos/800/600?random=1">
+                        </div>
+                        <span>
+                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
+                                </span>
+                    </a>
+                    <div class="mainPageWrapper-part3__centerBotLine">
+                        <div class="dateAndViews">
+                            <span class="date">11.11.2020</span>
+                            <span class="views">5454</span>
+                        </div>
+                        <div class="tags">
+                            <a href="#">Ponsse</a>
+                            <a href="#">Петрозаводский техникум</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class="horizontalBarFirst imgBlock">
+                            <img src="https://picsum.photos/800/600?random=1">
+                        </div>
+                        <span>
+                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
+                                </span>
+                    </a>
+                    <div class="mainPageWrapper-part3__centerBotLine">
+                        <div class="dateAndViews">
+                            <span class="date">11.11.2020</span>
+                            <span class="views">5454</span>
+                        </div>
+                        <div class="tags">
+                            <a href="#">Ponsse</a>
+                            <a href="#">Петрозаводский техникум</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class="horizontalBarFirst imgBlock">
+                            <img src="https://picsum.photos/800/600?random=1">
+                        </div>
+                        <span>
+                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
+                                </span>
+                    </a>
+                    <div class="mainPageWrapper-part3__centerBotLine">
+                        <div class="dateAndViews">
+                            <span class="date">11.11.2020</span>
+                            <span class="views">5454</span>
+                        </div>
+                        <div class="tags">
+                            <a href="#">Ponsse</a>
+                            <a href="#">Петрозаводский техникум</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mainPageWrapper-part3__line"></div>
+
+        <div class="mainPageWrapper-part3__right">
+            <h2 class="h2Title">Лесозаготовка</h2>
+
+            <div class="horizontalBar">
+                <div>
+                    <a href="#">
+                        <div class="horizontalBarFirst imgBlock">
+                            <img src="https://picsum.photos/800/600?random=1">
+                        </div>
+                        <span>
+                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
+                                </span>
+                    </a>
+                    <div class="mainPageWrapper-part3__centerBotLine">
+                        <div class="dateAndViews">
+                            <span class="date">11.11.2020</span>
+                            <span class="views">5454</span>
+                        </div>
+                        <div class="tags">
+                            <a href="#">Ponsse</a>
+                            <a href="#">Петрозаводский техникум</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class="horizontalBarFirst imgBlock">
+                            <img src="https://picsum.photos/800/600?random=1">
+                        </div>
+                        <span>
+                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
+                                </span>
+                    </a>
+                    <div class="mainPageWrapper-part3__centerBotLine">
+                        <div class="dateAndViews">
+                            <span class="date">11.11.2020</span>
+                            <span class="views">5454</span>
+                        </div>
+                        <div class="tags">
+                            <a href="#">Ponsse</a>
+                            <a href="#">Петрозаводский техникум</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class="horizontalBarFirst imgBlock">
+                            <img src="https://picsum.photos/800/600?random=1">
+                        </div>
+                        <span>
+                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
+                                </span>
+                    </a>
+                    <div class="mainPageWrapper-part3__centerBotLine">
+                        <div class="dateAndViews">
+                            <span class="date">11.11.2020</span>
+                            <span class="views">5454</span>
+                        </div>
+                        <div class="tags">
+                            <a href="#">Ponsse</a>
+                            <a href="#">Петрозаводский техникум</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainPageWrapper-part4">
+
+        <div class="calendarOfEvents">
+            <h2 class="h2Title">Календарь выставок</h2>
+
+            <div>
+                <a href="#">
+                    <span class="calendarOfEvents__Text">
+                        XXII Петербургский международный лесопромышленный форум, Санкт–Петербург
+                    </span>
+                    <span class="calendarOfEvents__Date">
+                        29.09.2020 30.09.2020
+                    </span>
+                </a>
+                <a href="#">
+                    <span class="calendarOfEvents__Text">
+                        XXII Петербургский международный лесопромышленный форум, Санкт–Петербург
+                    </span>
+                    <span class="calendarOfEvents__Date">
+                        29.09.2020 30.09.2020
+                    </span>
+                </a>
+                <a href="#">
+                    <span class="calendarOfEvents__Text">
+                        XXII Петербургский международный лесопромышленный форум, Санкт–Петербург
+                    </span>
+                    <span class="calendarOfEvents__Date">
+                        29.09.2020 30.09.2020
+                    </span>
+                </a>
+                <a href="#">
+                    <span class="calendarOfEvents__Text">
+                        XXII Петербургский международный лесопромышленный форум, Санкт–Петербург
+                    </span>
+                    <span class="calendarOfEvents__Date">
+                        29.09.2020 30.09.2020
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="sliderMini">
+            <div id="sliderMini" class="swiper-container">
+
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="sliderMini__Slide" style="background: linear-gradient(0deg, #003526 13.95%, rgba(255, 255, 255, 0) 100%),url('https://picsum.photos/800/600?random=2')">
+                            <div>
+                                <p class="sliderMini__SlideText">
+                                    Для деревянного домостроения разработают новые своды правил
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="sliderMini__Slide" style="background: linear-gradient(0deg, #003526 13.95%, rgba(255, 255, 255, 0) 100%),url('https://picsum.photos/800/600?random=2')">
+                            <div>
+                                <p class="sliderMini__SlideText">
+                                    Для деревянного домостроения разработают новые своды правил
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="sliderMini__Slide" style="background: linear-gradient(0deg, #003526 13.95%, rgba(255, 255, 255, 0) 100%),url('https://picsum.photos/800/600?random=2')">
+                            <div>
+                                <p class="sliderMini__SlideText">
+                                    Для деревянного домостроения разработают новые своды правил
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="sliderMini__Slide" style="background: linear-gradient(0deg, #003526 13.95%, rgba(255, 255, 255, 0) 100%),url('https://picsum.photos/800/600?random=2')">
+                            <div>
+                                <p class="sliderMini__SlideText">
+                                    Для деревянного домостроения разработают новые своды правил
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="sliderMini__SlideArrows">
+                                <span id="sliderMini__ArrowLeft" class="arrowSwitch arrowSwitchLeft">
+                                     <svg role="img" >
+                                        <use href="img/icons.svg#i-arrowSwitch"/>
+                                     </svg>
+                                </span>
+                    <span id="sliderMini__ArrowRight" class="arrowSwitch arrowSwitchRight">
+                                     <svg role="img">
+                                        <use href="img/icons.svg#i-arrowSwitch"/>
+                                     </svg>
+                                </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="quiz">
+            <div>
+                <h2 class="h2Title">
+                    Опрос
+                </h2>
+                <form>
+                    <p>Интересный вопрос на актуальную
+                        тему или по работе сайта
+                    </p>
+                    <ul>
+                        <li class="inputBlockRadio">
+                            <input id="one" type="radio">
+                            <label for="one">Да</label>
+                        </li>
+                        <li class="inputBlockRadio">
+                            <input id="two" type="radio">
+                            <label for="two">Нет</label>
+                        </li>
+                        <li class="inputBlockRadio">
+                            <input id="three" type="radio">
+                            <label for="three">Затрудняюсь ответить</label>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+
+        <div class="mainPageWrapper-part4__foxy">
+            <div class="foxyFull">
+                <a href="#" style="background: url('https://picsum.photos/1280/148?random=5') no-repeat scroll center center / contain"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainPageWrapper-part5">
+
+        <div class="mainPageWrapper-part5__left">
+            <div class="mainPageWrapper-part5__leftInside">
+                <div class="mainPageWrapper-part5__leftInsideTop">
+                    <span>
+                        Журнал "Лесной комплекс"
+                    </span>
+                    <span></span>
+                    <a href="#">
+                        Другие номера
+                    </a>
+                    <a href="#">
+                       Архив
+                    </a>
+                </div>
+                <div class="mainPageWrapper-part5__leftInsideBot">
+                    <div class="mainPageWrapper-part5__leftInsideBotMag">
+                        <div>
+                            <img src="img/mag.png">
+                        </div>
+                        <div>
+                            <a class="button buttonGreen" href="#">
+                                Читать онлайн
+                            </a>
+                            <a onclick="openModal()" class="openModal">
+                                Подписаться на журнал
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mainPageWrapper-part5__leftInsideBotHoriz">
+                        <a href="#">
+                            <img src="img/mag.png">
+                            <div>
+                                <div>
+                                    <p>
+                                        Лесной комплекс Август 2020
+                                    </p>
+                                    <div class="dateAndViews">
+                                        <span class="date">11.11.2020</span>
+                                        <span class="views">5454</span>
+                                    </div>
+                                </div>
+                                <span>
+                                    Читать номер
+                                </span>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <img src="img/mag.png">
+                            <div>
+                                <div>
+                                    <p>
+                                        Лесной комплекс Август 2020
+                                    </p>
+                                    <div class="dateAndViews">
+                                        <span class="date">11.11.2020</span>
+                                        <span class="views">5454</span>
+                                    </div>
+                                </div>
+                                <span>
+                                    Читать номер
+                                </span>
+                            </div>
+
+                        </a>
+                        <a href="#">
+                            <img src="img/mag.png">
+                            <div>
+                                <div>
+                                    <p>
+                                        Лесной комплекс Август 2020
+                                    </p>
+                                    <div class="dateAndViews">
+                                        <span class="date">11.11.2020</span>
+                                        <span class="views">5454</span>
+                                    </div>
+                                </div>
+                                <span>
+                                    Читать номер
+                                </span>
+                            </div>
+
+                        </a>
+                        <a href="#">
+                            <img src="img/mag.png">
+                            <div>
+                                <div>
+                                    <p>
+                                        Лесной комплекс Август 2020
+                                    </p>
+                                    <div class="dateAndViews">
+                                        <span class="date">11.11.2020</span>
+                                        <span class="views">5454</span>
+                                    </div>
+                                </div>
+                                <span>
+                                    Читать номер
+                                </span>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="foxy">
+            <a href="#" style="background-image: url('img/foxy.png')">
+            </a>
+        </div>
+
+        <div class="readersChoise">
+            <h2 class="h2Title">Выбор читателей</h2>
+
+            <div>
+                <div class="readersChoiseTime">
+                    <a class="active" href="#">
+                        За неделю
+                    </a>
+                    <a href="#">
+                        За месяц
+                    </a>
+                    <a href="#">
+                        За год
+                    </a>
+                </div>
+                <div class="horizontalBar">
+                    <div>
+                        <a href="#">
+                            <span>
+                                Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
+                            </span>
+                        </a>
+                        <div class="readersChoiseBotLine">
+                            <div class="dateAndViews">
+                                <span class="date">11.11.2020</span>
+                                <span class="views">5454</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <span>
+                                Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
+                            </span>
+                        </a>
+                        <div class="readersChoiseBotLine">
+                            <div class="dateAndViews">
+                                <span class="date">11.11.2020</span>
+                                <span class="views">5454</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <span>
+                                Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
+                            </span>
+                        </a>
+                        <div class="readersChoiseBotLine">
+                            <div class="dateAndViews">
+                                <span class="date">11.11.2020</span>
+                                <span class="views">5454</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mainPageWrapper-part5__mobile">
+            <a href="#">Другие номера</a>
+            <a href="#">Архив</a>
+        </div>
+    </div>
+
+    <div class="mainPageWrapper-part3 mainPageWrapper-part3Bottom">
+        <div class="foxy">
+            <a href="#" style="background-image: url('img/foxy.png')">
+            </a>
+        </div>
+
+        <div class="mainPageWrapper-part3__center">
+            <h2 class="h2Title">Обзор ЛПК</h2>
+
+            <div class="horizontalBar">
+                <div>
+                    <a href="#">
+                        <div class="horizontalBarFirst imgBlock">
+                            <img src="https://picsum.photos/800/600?random=1">
+                        </div>
+                        <span>
+                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
+                                </span>
+                    </a>
+                    <div class="mainPageWrapper-part3__centerBotLine">
+                        <div class="dateAndViews">
+                            <span class="date">11.11.2020</span>
+                            <span class="views">5454</span>
+                        </div>
+                        <div class="tags">
+                            <a href="#">Ponsse</a>
+                            <a href="#">Петрозаводский техникум</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class="horizontalBarFirst imgBlock">
+                            <img src="https://picsum.photos/800/600?random=1">
+                        </div>
+                        <span>
+                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
+                                </span>
+                    </a>
+                    <div class="mainPageWrapper-part3__centerBotLine">
+                        <div class="dateAndViews">
+                            <span class="date">11.11.2020</span>
+                            <span class="views">5454</span>
+                        </div>
+                        <div class="tags">
+                            <a href="#">Ponsse</a>
+                            <a href="#">Петрозаводский техникум</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class="horizontalBarFirst imgBlock">
+                            <img src="https://picsum.photos/800/600?random=1">
+                        </div>
+                        <span>
+                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
+                                </span>
+                    </a>
+                    <div class="mainPageWrapper-part3__centerBotLine">
+                        <div class="dateAndViews">
+                            <span class="date">11.11.2020</span>
+                            <span class="views">5454</span>
+                        </div>
+                        <div class="tags">
+                            <a href="#">Ponsse</a>
+                            <a href="#">Петрозаводский техникум</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mainPageWrapper-part3__line"></div>
+
+        <div class="mainPageWrapper-part3__right">
+            <h2 class="h2Title">Мировой опыт</h2>
+
+            <div class="horizontalBar">
+                <div>
+                    <a href="#">
+                        <div class="horizontalBarFirst imgBlock">
+                            <img src="https://picsum.photos/800/600?random=1">
+                        </div>
+                        <span>
+                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
+                                </span>
+                    </a>
+                    <div class="mainPageWrapper-part3__centerBotLine">
+                        <div class="dateAndViews">
+                            <span class="date">11.11.2020</span>
+                            <span class="views">5454</span>
+                        </div>
+                        <div class="tags">
+                            <a href="#">Ponsse</a>
+                            <a href="#">Петрозаводский техникум</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class="horizontalBarFirst imgBlock">
+                            <img src="https://picsum.photos/800/600?random=1">
+                        </div>
+                        <span>
+                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
+                                </span>
+                    </a>
+                    <div class="mainPageWrapper-part3__centerBotLine">
+                        <div class="dateAndViews">
+                            <span class="date">11.11.2020</span>
+                            <span class="views">5454</span>
+                        </div>
+                        <div class="tags">
+                            <a href="#">Ponsse</a>
+                            <a href="#">Петрозаводский техникум</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class="horizontalBarFirst imgBlock">
+                            <img src="https://picsum.photos/800/600?random=1">
+                        </div>
+                        <span>
+                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
+                                </span>
+                    </a>
+                    <div class="mainPageWrapper-part3__centerBotLine">
+                        <div class="dateAndViews">
+                            <span class="date">11.11.2020</span>
+                            <span class="views">5454</span>
+                        </div>
+                        <div class="tags">
+                            <a href="#">Ponsse</a>
+                            <a href="#">Петрозаводский техникум</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mainPageWrapper-part6">
+    <div class="container">
+        <div class="mainPageWrapper-part6__sliderTop">
+            <div class="mainPageWrapper-part6__sliderTopLeft">
+                <h2 class="h2Title">Взгляд изнутри</h2>
+            </div>
+
+            <div class="mainPageWrapper-part6__sliderTopRight">
+                <span id="mainPageWrapper-part6__sliderTopArrowLeft" class="arrowSwitch arrowSwitchLeft">
+                         <svg role="img" >
+                            <use href="img/icons.svg#i-arrowSwitch"/>
+                         </svg>
+                    </span>
+                <span id="mainPageWrapper-part6__sliderTopArrowRight" class="arrowSwitch arrowSwitchRight">
+                         <svg role="img">
+                            <use href="img/icons.svg#i-arrowSwitch"/>
+                         </svg>
+                    </span>
+            </div>
+        </div>
+
+        <div class="swiper-container mainPageWrapper-part6__sliderBot">
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <div class="imgBlock">
+                            <img src="img/face.png">
+                        </div>
+                        <div>
+                            <p>
+                                Франческо Пенсабене
+                            </p>
+                            <p>
+                                директор агентства ИЧЕ (отдел по развитию торгового обмена посольства Италии)
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>
+                            Под маркой «Made in Italy»
+                        </p>
+                        <p>
+                            Итальянская экспозиция на международной выставке Woodex в 2019 году, как и в прежние годы, была представлена очень широко. Этот факт сам по себе показателен и говорит о том, насколько итальянские производители деревообрабатывающего оборудования ...
+                        </p>
+                        <div class="dateAndViews">
+                            <a href="#">Подробнее</a>
+                            <span class="date">10.10.2010</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="imgBlock">
+                            <img src="img/face.png">
+                        </div>
+                        <div>
+                            <p>
+                                Франческо Пенсабене
+                            </p>
+                            <p>
+                                директор агентства ИЧЕ (отдел по развитию торгового обмена посольства Италии)
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>
+                            Под маркой «Made in Italy»
+                        </p>
+                        <p>
+                            Итальянская экспозиция на международной выставке Woodex в 2019 году, как и в прежние годы, была представлена очень широко. Этот факт сам по себе показателен и говорит о том, насколько итальянские производители деревообрабатывающего оборудования ...
+                        </p>
+                        <div class="dateAndViews">
+                            <a href="#">Подробнее</a>
+                            <span class="date">10.10.2010</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="imgBlock">
+                            <img src="img/face.png">
+                        </div>
+                        <div>
+                            <p>
+                                Франческо Пенсабене
+                            </p>
+                            <p>
+                                директор агентства ИЧЕ (отдел по развитию торгового обмена посольства Италии)
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>
+                            Под маркой «Made in Italy»
+                        </p>
+                        <p>
+                            Итальянская экспозиция на международной выставке Woodex в 2019 году, как и в прежние годы, была представлена очень широко. Этот факт сам по себе показателен и говорит о том, насколько итальянские производители деревообрабатывающего оборудования ...
+                        </p>
+                        <div class="dateAndViews">
+                            <a href="#">Подробнее</a>
+                            <span class="date">10.10.2010</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="imgBlock">
+                            <img src="img/face.png">
+                        </div>
+                        <div>
+                            <p>
+                                Франческо Пенсабене
+                            </p>
+                            <p>
+                                директор агентства ИЧЕ (отдел по развитию торгового обмена посольства Италии)
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>
+                            Под маркой «Made in Italy»
+                        </p>
+                        <p>
+                            Итальянская экспозиция на международной выставке Woodex в 2019 году, как и в прежние годы, была представлена очень широко. Этот факт сам по себе показателен и говорит о том, насколько итальянские производители деревообрабатывающего оборудования ...
+                        </p>
+                        <div class="dateAndViews">
+                            <a href="#">Подробнее</a>
+                            <span class="date">10.10.2010</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="imgBlock">
+                            <img src="img/face.png">
+                        </div>
+                        <div>
+                            <p>
+                                Франческо Пенсабене
+                            </p>
+                            <p>
+                                директор агентства ИЧЕ (отдел по развитию торгового обмена посольства Италии)
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>
+                            Под маркой «Made in Italy»
+                        </p>
+                        <p>
+                            Итальянская экспозиция на международной выставке Woodex в 2019 году, как и в прежние годы, была представлена очень широко. Этот факт сам по себе показателен и говорит о том, насколько итальянские производители деревообрабатывающего оборудования ...
+                        </p>
+                        <div class="dateAndViews">
+                            <a href="#">Подробнее</a>
+                            <span class="date">10.10.2010</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="imgBlock">
+                            <img src="img/face.png">
+                        </div>
+                        <div>
+                            <p>
+                                Франческо Пенсабене
+                            </p>
+                            <p>
+                                директор агентства ИЧЕ (отдел по развитию торгового обмена посольства Италии)
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>
+                            Под маркой «Made in Italy»
+                        </p>
+                        <p>
+                            Итальянская экспозиция на международной выставке Woodex в 2019 году, как и в прежние годы, была представлена очень широко. Этот факт сам по себе показателен и говорит о том, насколько итальянские производители деревообрабатывающего оборудования ...
+                        </p>
+                        <div class="dateAndViews">
+                            <a href="#">Подробнее</a>
+                            <span class="date">10.10.2010</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mainPageWrapper-part7">
+    <div class="container">
+        <div>
+            <p>
+                Ежемесячный обзор ЛПК
+            </p>
+            <p>
+                Подпишитесь на наш дайджест и получайте подборку самых актуальных публикаций каждый месяц на электронную почту! 100% отраслевая информация и никакого спама.
+            </p>
+
+        </div>
+
+        <form>
+            <div>
+                <label for="four">Как к вам обращаться?</label>
+                <input id="four" type="text" placeholder="Ваше имя">
+            </div>
+            <div>
+                <label for="five">E-mail</label>
+                <input id="five" type="text" placeholder="name@mail.ru">
+            </div>
+            <div class="mainPageWrapper-part7__button">
+                <button class="button buttonWhite" type="submit">Подписаться</button>
+                <div class="inputBlockCheckbox">
+                    <input id="six" type="checkbox">
+                    <label for="six">
+                        Я соглашаюсь с условиями обработки персональных данных
+                    </label>
+                </div>
+            </div>
+        </form>
+
+        <div>
+            <img src="img/man.png">
+        </div>
+    </div>
+    <div class="mainPageWrapper-part7__left"></div>
+    <div class="mainPageWrapper-part7__middle"></div>
+    <div class="mainPageWrapper-part7__right"></div>
+</div>
+
+<div class="container partners-slider">
+    <div class="partners-slider__sliderTop">
+        <div class="partners-slider__sliderTopLeft">
+            <h2 class="h2Title">Наши партнеры</h2>
+        </div>
+
+        <div class="partners-slider__sliderTopRight">
+            <span id="partners-slider__sliderTopArrowLeft" class="arrowSwitch arrowSwitchLeft">
+                     <svg role="img" >
+                        <use href="img/icons.svg#i-arrowSwitch"/>
+                     </svg>
+                </span>
+            <span id="partners-slider__sliderTopArrowRight" class="arrowSwitch arrowSwitchRight">
+                     <svg role="img">
+                        <use href="img/icons.svg#i-arrowSwitch"/>
+                     </svg>
+                </span>
+        </div>
+    </div>
+
+    <div id="partners-slider" class="swiper-container partners-slider__sliderBot">
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="imgBlock imgBlockFull">
+                    <img src="https://picsum.photos/800/600?random=1">
+                </div>
+                <div>
+                    <p>
+                        Компания
+                    </p>
+                    <span>
+                        Высказывание или короткое описание компании
+                    </span>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBlock imgBlockFull">
+                    <img src="https://picsum.photos/800/600?random=1">
+                </div>
+                <div>
+                    <p>
+                        Компания
+                    </p>
+                    <span>
+                        Высказывание или короткое описание компании
+                    </span>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBlock imgBlockFull">
+                    <img src="https://picsum.photos/800/600?random=1">
+                </div>
+                <div>
+                    <p>
+                        Компания
+                    </p>
+                    <span>
+                        Высказывание или короткое описание компании
+                    </span>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBlock imgBlockFull">
+                    <img src="https://picsum.photos/800/600?random=1">
+                </div>
+                <div>
+                    <p>
+                        Компания
+                    </p>
+                    <span>
+                        Высказывание или короткое описание компании
+                    </span>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBlock imgBlockFull">
+                    <img src="https://picsum.photos/800/600?random=1">
+                </div>
+                <div>
+                    <p>
+                        Компания
+                    </p>
+                    <span>
+                        Высказывание или короткое описание компании
+                    </span>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBlock imgBlockFull">
+                    <img src="https://picsum.photos/800/600?random=1">
+                </div>
+                <div>
+                    <p>
+                        Компания
+                    </p>
+                    <span>
+                        Высказывание или короткое описание компании
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mainPageWrapper-part9">
+    <div class="rubricatorTitle">
+            <span>
+                Рубрикатор журнала “Лесной комплекс”
+            </span>
+    </div>
+
+    <div class="rubricator">
+        <ul>
+            <li>
+                <a href="#">
+                    Лесовосстановление и защита
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Строительство и обслуживание дорог
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Строительство и обслуживание дорог
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Строительство и обслуживание дорог
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Строительство и обслуживание дорог
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Строительство и обслуживание дорог
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Строительство и обслуживание дорог
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Строительство и обслуживание дорог
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Строительство и обслуживание дорог
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Строительство и обслуживание дорог
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Строительство и обслуживание дорог
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Строительство и обслуживание дорог
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Строительство и обслуживание дорог
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Строительство и обслуживание дорог
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Строительство и обслуживание дорог
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+<div onclick="toUp()" class="listedUp">
+    <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.5 24V8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8.25 16L16.5 8L24.75 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</div>
+
+<footer >
+    <div class="modalSubscription">
+        <div>
+            <div class="modalSubscription__middle">
+                <p>
+                    Подпишитесь <br>
+                    на наши обновления
+                </p>
+                <p>
+                    Подпишитесь на наш дайджест и получайте подборку самых актуальных публикаций каждый месяц на электронную почту! 100% отраслевая информация и никакого спама.
+                </p>
+                <form>
+                    <div>
+                        <label for="aa">Как к вам обращаться?</label>
+                        <input id="aa" type="text" placeholder="Ваше имя">
+                    </div>
+                    <div>
+                        <label for="aaa">E-mail</label>
+                        <input id="aaa" type="text" placeholder="name@mail.ru">
+                    </div>
+                    <div class="modalSubscription__button">
+                        <div class="inputBlockCheckbox">
+                            <input id="seven" type="checkbox">
+                            <label for="seven">
+                                Я соглашаюсь с условиями обработки персональных данных
+                            </label>
+                        </div>
+                        <button class="button buttonGreen" type="submit">Подписаться</button>
+                    </div>
+                </form>
+            </div>
+            <div onclick="closeModal()" class="modalSubscription__close"></div>
+        </div>
+
+    </div>
+    <div class="container footer">
+        <div class="footer__one">
+            <a href="/">
+                <svg class="logo" role="img" >
+                    <use href="img/icons.svg#i-logo"/>
+                </svg>
+            </a>
+            <a href="#">О проекте</a>
+            <a href="#">Журнал “Лесной комплекс”</a>
+            <a href="#">Рекламодателям</a>
+        </div>
+        <div class="footer__two">
+            <a href="#">Новости</a>
+            <a href="#">В центре внимания</a>
+            <a href="#">Рынок</a>
+            <a href="#">Технологии</a>
+            <a href="#">Взгляд изнутри</a>
+            <a href="#">Аналитика</a>
+            <a href="#">Крупным планом</a>
+            <a href="#">Круглый стол </a>
+            <a href="#">Спецпроекты</a>
+        </div>
+        <div class="footer__three">
+            <a href="#">Условия использования сайта</a>
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Подписаться на ежемесячный обзор ЛПК </a>
+            <a onclick="openModal()" class="openModal button buttonGreen">Подписаться</a>
+        </div>
+        <div class="footer__four">
+            <span>
+                660068, Краснояск <br>
+                Мичурина, 3в, оф.405
+            </span>
+            <a href="tel:+73912371537">+7 391 237 15 37</a>
+            <a href="mailto:lks@pgmedia.ru">lks@pgmedia.ru</a>
+            <div class="socialMedia">
                     <a href="#">
                         <svg class="" role="img" >
                             <use href="img/icons.svg#i-vk"/>
@@ -704,118 +1916,30 @@
                             <use href="img/icons.svg#i-fb"/>
                         </svg>
                     </a>
-                </div>
-                <span>Следите за нами в соцсетях</span>
-                <div class="socialMedia">
-                    <a href="#">
-                        <svg class="" role="img" >
-                            <use href="img/icons.svg#i-zen"/>
-                        </svg>
-                    </a>
-
-                </div>
-                <span>Читайте нас в Яндекс.Дзен</span>
-                <div class="socialMedia">
-                    <a href="#">
-                        <svg class="" role="img" >
-                            <use href="img/icons.svg#i-help"/>
-                        </svg>
-                    </a>
-                </div>
-                <span>Задайте вопрос редакции</span>
             </div>
-
-
-        </div>
-
-        <div class="col-12 col-xl-3 mainPageWrapper-part2__right">
-            <div class="foxy">
-                <a href="#" style="background-image: url('img/foxy.png')">
-
-                </a>
-            </div>
-
-            <div>
-                <h2 class="h2Title">
-                    Технологии
-                </h2>
-                <div class="horizontalBar">
-                    <div>
-                        <a href="#">
-                            <div class="imgBlock">
-                                <img src="https://picsum.photos/800/600?random=1">
-                            </div>
-                            <span>
-                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
-                                </span>
-                        </a>
-                        <div class="dateAndViews">
-                            <span class="date">11.11.2020</span>
-                            <span class="views">5454</span>
-                        </div>
-                    </div>
-                    <div>
-                        <a href="#">
-                            <div class="imgBlock">
-                                <img src="https://picsum.photos/800/600?random=1">
-                            </div>
-                            <span>
-                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
-                                </span>
-                        </a>
-                        <div class="dateAndViews">
-                            <span class="date">11.11.2020</span>
-                            <span class="views">5454</span>
-                        </div>
-                    </div>
-                    <div>
-                        <a href="#">
-                            <div class="imgBlock">
-                                <img src="https://picsum.photos/800/600?random=1">
-                            </div>
-                            <span>
-                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
-                                </span>
-                        </a>
-                        <div class="dateAndViews">
-                            <span class="date">11.11.2020</span>
-                            <span class="views">5454</span>
-                        </div>
-                    </div>
-                    <div>
-                        <a href="#">
-                            <div class="imgBlock">
-                                <img src="https://picsum.photos/800/600?random=1">
-                            </div>
-                            <span>
-                                    Красноярского экс-министра лесного хозяйства обвиняют во взяточничестве
-                                </span>
-                        </a>
-                        <div class="dateAndViews">
-                            <span class="date">11.11.2020</span>
-                            <span class="views">5454</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="">
+                <svg class="" role="img" >
+                    <use href="img/icons.svg#i-MIR"/>
+                </svg>
             </div>
         </div>
-
-        <div class="col-12 mainPageWrapper-part2__foxy">
-            <div class="foxyFull">
-                <a href="#" style="background: url('https://picsum.photos/1280/148?random=5') no-repeat scroll center center / contain"></a>
-            </div>
+        <div class="footer__five">
+            <span>
+                Возрастное ограничение 16+ <br>
+                © 2012-2020 PromoGroup Media <br>
+                Копирование материалов запрещено.
+            </span>
+        </div>
+        <div class="footer__six">
+            <span>
+                Продолжая использовать наш сайт, вы даете согласие на обработку файлов Cookies и других пользовательских данных, в соответствии с <a href="#">Политикой конфиденциальности</a>.
+            </span>
         </div>
     </div>
-</div>
-
-
-
-<footer>
-
 </footer>
 
-
-
+<script src="js/app.min.js"></script>
+<script src="js/swiper.min.js"></script>
 <script>svg4everybody();</script>
 </body>
 </html>

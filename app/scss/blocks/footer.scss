@@ -1,3 +1,132 @@
 footer {
-  margin-top: 5rem;
+  margin-top: 40px;
+  background-color: rgba(0, 0, 0, .05);
+
+  .footer {
+    padding: 75px 15px 55px 15px;
+    display: grid;
+    column-gap: 130px;
+    row-gap: 30px;
+    grid-template:
+          "one two three four"
+          "five six six six"
+  /1.5fr 1fr 1fr 1fr
+  ;
+    a {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.38);
+      &:hover {
+        color: $main-color;
+      }
+    }
+    a:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+    }
+    &__one {
+      a:first-child {
+        margin-bottom: 55px;
+      }
+      svg {
+        max-height: 80px;
+        width: 100%;
+      }
+      grid-area: one;
+    }
+    &__two {
+      grid-area: two;
+    }
+    &__three {
+      grid-area: three;
+      a:nth-child(2) {
+        margin-bottom: 50px;
+      }
+      .button {
+        width: max-content;
+      }
+    }
+    &__four {
+      a {
+        text-transform: none;
+      }
+      span {
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 20px;
+        color: rgba(0, 0, 0, 0.38);
+        margin-bottom: 20px;
+      }
+      a:not(:last-of-type) {
+        margin-bottom: 5px;
+      }
+      .socialMedia {
+        a {
+          margin-bottom: 0;
+        }
+      }
+      > div:last-child {
+        svg {
+          width: 100%;
+          max-width: 110px;
+          max-height: 32px;
+        }
+      }
+      grid-area: four;
+    }
+    &__five {
+      span {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        color: rgba(0, 0, 0, 0.38);
+      }
+      grid-area: five;
+    }
+    &__six {
+      span {
+        margin-top: auto;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        color: rgba(0, 0, 0, 0.38);
+      }
+      a {
+        text-transform: none;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        color: $main-color;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      grid-area: six;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  footer {
+    .footer {
+      grid-template:
+          "one"
+          "two"
+          "three"
+          "four"
+          "five"
+          "six"
+  /1fr
+    ;
+      .logo {
+        max-width: 298px;
+      }
+    }
+  }
 }

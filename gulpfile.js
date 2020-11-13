@@ -47,7 +47,7 @@ function styles() {
 
 function scripts() {
   // обновление при изменении js
-  return src(["node_modules/jquery/dist/jquery.min.js", "app/js/**/*"])
+  return src(["app/js/**/*"])
     .pipe(concat("app.min.js"))
     .pipe(uglify())
     .pipe(dest("app/html/js/"))

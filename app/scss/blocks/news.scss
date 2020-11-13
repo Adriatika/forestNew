@@ -1,0 +1,255 @@
+.news {
+  padding-top: 15px;
+  display: grid;
+  row-gap: 25px;
+  column-gap: 30px;
+  grid-template:
+    "breadcrumbs breadcrumbs breadcrumbs foxyOne"
+    "one one one foxyOne"
+    "one one one readers"
+    "two two two readers"
+    "two two two readers"
+    "two two two foxyTwo"
+    "sliderBigOne sliderBigOne sliderBigOne sliderBigOne"
+    "foxyFullOne foxyFullOne foxyFullOne foxyFullOne"
+    "three three three foxyThree"
+    "three three three anotherNews"
+    "four four four anotherNews"
+    "four four four anotherNews"
+    "four four four foxyFour"
+    "five five five foxyFour"
+    "five five five newMag"
+    "foxyFullTwo foxyFullTwo foxyFullTwo foxyFullTwo"
+    "pagination pagination pagination calendar"
+    "greenBlock greenBlock greenBlock calendar"
+    "greenBlock greenBlock greenBlock foxyFive"
+    "greenBlock greenBlock greenBlock sliderMini"
+    "socialBlock socialBlock socialBlock sliderMini"
+    "socialBlock socialBlock socialBlock sliderMini"
+    "sliderBigTwo sliderBigTwo sliderBigTwo sliderBigTwo"
+    "partners partners partners partners"
+    "foxyLong foxyLong foxyLong foxyLong"
+    / 1fr 1fr 1fr 1fr
+;
+
+  .horizontalBar > div {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+  .horizontalBar__Right {
+    flex: 0 0 100%;
+    > a:first-of-type {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 15px;
+    }
+    > a:last-of-type {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      color: rgba(0, 0, 0, 0.38);
+      margin-bottom: 30px;
+      &:hover {
+        color: $main-color;
+        text-decoration: none;
+      }
+    }
+  }
+  .dateAndViews {
+    justify-content: space-between;
+    > div:first-child {
+      flex: 0 0 30%;
+      span {
+        color: rgba(0, 0, 0, 0.38);
+        display: inline-block;
+      }
+    }
+  }
+  .readersChoise, .anotherNews, .greenBlock {
+    .horizontalBar {
+      > div {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .breadcrumbs {
+    grid-area: breadcrumbs;
+  }
+  .horizontalBar1 {
+    grid-area: one;
+  }
+  .horizontalBar2 {
+    grid-area: two;
+  }
+  .horizontalBar3 {
+    grid-area: three;
+  }
+  .horizontalBar4 {
+    grid-area: four;
+  }
+  .horizontalBar5 {
+    grid-area: five;
+  }
+
+  .readersChoise {
+    grid-area: readers;
+  }
+  .anotherNews {
+    grid-area: anotherNews;
+  }
+  .newMag{
+    grid-area: newMag;
+  }
+
+  .foxyOne {
+    grid-area: foxyOne;
+  }
+  .foxyTwo {
+    grid-area: foxyTwo;
+  }
+  .foxyThree {
+    grid-area: foxyThree;
+  }
+  .foxyFour {
+    grid-area: foxyFour;
+  }
+  .foxyFive {
+    grid-area: foxyFive;
+  }
+
+  .foxyFullOne {
+    grid-area: foxyFullOne;
+  }
+  .foxyFullTwo {
+    grid-area: foxyFullTwo;
+  }
+
+  .foxyLong {
+    grid-area: foxyLong;
+  }
+
+  .movingPicturesBigOne {
+    grid-area: sliderBigOne;
+  }
+  .movingPicturesBigTwo {
+    grid-area: sliderBigTwo;
+  }
+  .partners-slider {
+    grid-area: partners;
+  }
+  .pagination {
+    grid-area: pagination;
+  }
+  .calendarOfEvents {
+    grid-area: calendar;
+    a {
+      margin-bottom: 15px;
+    }
+  }
+  .greenBlock {
+    grid-area: greenBlock;
+  }
+  .sliderMini {
+    grid-area: sliderMini;
+    &__Slide {
+      > div {
+        margin: 0 25px 15px 15px;
+         p {
+          margin-bottom: 0;
+        }
+      }
+      &Arrows {
+        top: 15px;
+        left: 15px;
+        right: auto;
+      }
+    }
+  }
+  .socialBlock {
+    grid-area: socialBlock;
+  }
+}
+
+@media (max-width: 1024px) {
+  .news {
+    grid-template:
+    "breadcrumbs breadcrumbs breadcrumbs foxyOne"
+    "one one one foxyOne"
+    "one one one readers"
+    "two two two readers"
+    "two two two readers"
+    "two two two foxyTwo"
+    "sliderBigOne sliderBigOne sliderBigOne sliderBigOne"
+    "foxyFullOne foxyFullOne foxyFullOne foxyFullOne"
+    "three three three foxyThree"
+    "three three three anotherNews"
+    "four four four anotherNews"
+    "four four four anotherNews"
+    "four four four foxyFour"
+    "five five five foxyFour"
+    "five five five newMag"
+    "foxyFullTwo foxyFullTwo foxyFullTwo foxyFullTwo"
+    "pagination pagination pagination pagination"
+    "greenBlock greenBlock greenBlock greenBlock"
+    "calendar calendar foxyFive sliderMini"
+    "socialBlock socialBlock socialBlock sliderMini"
+    "socialBlock socialBlock socialBlock sliderMini"
+    "sliderBigTwo sliderBigTwo sliderBigTwo sliderBigTwo"
+    "partners partners partners partners"
+    "foxyLong foxyLong foxyLong foxyLong"
+    / 1fr 1fr 1fr 1fr
+  ;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .news {
+    grid-template:
+    "breadcrumbs"
+    "one"
+    "foxyFullOne"
+    "two"
+    "foxyOne"
+    "sliderBigOne"
+    "foxyFullTwo"
+    "three"
+    "foxyTwo"
+    "four"
+    "foxyThree"
+    "newMag"
+    "foxyFour"
+    "greenBlock"
+    "pagination"
+    "foxyLong"
+    "sliderBigTwo"
+    "foxyFive"
+    / 1fr
+  ;
+    .horizontalBar {
+      > div {
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+      }
+      &__Right {
+        a:last-of-type {
+          margin-bottom: 15px;
+        }
+      }
+      .dateAndViews {
+        > div:first-child {
+          flex: 0 0 100%;
+        }
+      }
+      .tags {
+        display: none !important;
+      }
+    }
+    .horizontalBar5, .partners-slider , .sliderMini, .socialBlock, .calendarOfEvents, .anotherNews, .readersChoise {
+      display: none;
+    }
+  }
+}
