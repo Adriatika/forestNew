@@ -3,6 +3,10 @@
     margin-top: 10px;
   }
   &__ImgBlc {
+    .imgBlock {
+      position: relative;
+      overflow: initial;
+    }
     img {
       border-radius: 5px;
     }

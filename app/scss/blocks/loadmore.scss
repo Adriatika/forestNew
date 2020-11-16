@@ -1,0 +1,28 @@
+.loadmore {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 15px 0;
+  span {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.38);
+    display: flex;
+    justify-content: center;
+  }
+  &:hover {
+    background: #38AD4A;
+    span {
+      color: white;
+    }
+  }
+  &:active {
+    background: rgba(56, 173, 74, 0.38);
+    span {
+      color: rgba(0, 0, 0, 0.38);
+    }
+  }
+}

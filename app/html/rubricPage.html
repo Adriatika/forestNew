@@ -581,6 +581,9 @@
         <div>
           <a href="#" class="horizontalBarFirst imgBlock">
             <img src="https://picsum.photos/800/600?random=1">
+            <span class="greenTag">
+              Новость часа
+            </span>
           </a>
           <div class="horizontalBar__Right">
             <a href="#">
@@ -621,9 +624,19 @@
     <div class="foxy foxyFour">
       <a href="#" style="background-image: url('img/foxy.png')"></a>
     </div>
+    <div class="foxy foxyFive">
+      <a href="#" style="background-image: url('img/foxy.png')"></a>
+    </div>
 
     <div class="foxyFull foxyFullOne">
       <a href="#" style="background: url('https://picsum.photos/1280/148?random=5') no-repeat scroll center center / contain"></a>
+    </div>
+    <div class="foxyFull foxyFullTwo">
+      <a href="#" style="background: url('https://picsum.photos/1280/148?random=5') no-repeat scroll center center / contain"></a>
+    </div>
+
+    <div class="foxyLong">
+      <a href="#" style="background: url('https://picsum.photos/728/90?random=5') no-repeat scroll center center / contain"></a>
     </div>
 
     <div class="anotherNews">
@@ -732,12 +745,12 @@
       <div class="movingPicturesTop">
 
         <div class="movingPicturesTopRight">
-            <span id="movingPicturesBigTwoArrowLeft" class="arrowSwitch arrowSwitchLeft">
+            <span id="movingPicturesBigOneArrowLeft" class="arrowSwitch arrowSwitchLeft">
                  <svg role="img" >
                     <use href="img/icons.svg#i-arrowSwitch"/>
                  </svg>
             </span>
-          <span id="movingPicturesBigTwoArrowRight" class="arrowSwitch arrowSwitchRight">
+          <span id="movingPicturesBigOneArrowRight" class="arrowSwitch arrowSwitchRight">
                  <svg role="img">
                     <use href="img/icons.svg#i-arrowSwitch"/>
                  </svg>
@@ -829,18 +842,107 @@
       </div>
     </div>
 
+    <div  class="movingPictures movingPicturesOne">
+      <div class="movingPicturesTop">
+        <div class="movingPicturesTopLeft">
+          <a onclick="openModal()" class="openModal">
+            подписаться
+          </a>
+          <a href="#">
+            ежемесячный обзор лпк
+          </a>
+        </div>
+
+        <div class="movingPicturesTopRight">
+                    <span id="movingPicturesOneTopArrowLeft" class="arrowSwitch arrowSwitchLeft">
+                         <svg role="img" >
+                            <use href="img/icons.svg#i-arrowSwitch"/>
+                         </svg>
+                    </span>
+          <span id="movingPicturesOneTopArrowRight" class="arrowSwitch arrowSwitchRight">
+                         <svg role="img">
+                            <use href="img/icons.svg#i-arrowSwitch"/>
+                         </svg>
+                    </span>
+        </div>
+      </div>
+      <div id="movingPicturesOne" class="swiper-container movingPicturesContainer">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="imgBlock imgBlockFull">
+                <img src="https://picsum.photos/800/600?random=3">
+              </div>
+            </a>
+            <div>
+              <a class="categoryBlock" href="#">Учебный класс</a>
+              <a class="movingPicturesTitle" href="#">Макроэкономика и цены на круглое сырье</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="imgBlock imgBlockFull">
+                <img src="https://picsum.photos/800/600?random=3">
+              </div>
+            </a>
+            <div>
+              <a class="categoryBlock" href="#">Учебный класс</a>
+              <a class="movingPicturesTitle" href="#">Макроэкономика и цены на круглое сырье</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="imgBlock imgBlockFull">
+                <img src="https://picsum.photos/800/600?random=3">
+              </div>
+            </a>
+            <div>
+              <a class="categoryBlock" href="#">Учебный класс</a>
+              <a class="movingPicturesTitle" href="#">Макроэкономика и цены на круглое сырье</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="imgBlock imgBlockFull">
+                <img src="https://picsum.photos/800/600?random=3">
+              </div>
+            </a>
+            <div>
+              <a class="categoryBlock" href="#">Учебный класс</a>
+              <a class="movingPicturesTitle" href="#">Макроэкономика и цены на круглое сырье</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="imgBlock imgBlockFull">
+                <img src="https://picsum.photos/800/600?random=3">
+              </div>
+            </a>
+            <div>
+              <a class="categoryBlock" href="#">Учебный класс</a>
+              <a class="movingPicturesTitle" href="#">Макроэкономика и цены на круглое сырье</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="loadmore">
+      <span>
+        Загрузить еще
+      </span>
+    </div>
   </div>
 </div>
 
-
-
-
-
 <div onclick="toUp()" class="listedUp">
   <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16.5 24V8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.25 16L16.5 8L24.75 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M16.5 24V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8.25 16L16.5 8L24.75 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
+  <span>в начало</span>
 </div>
 
 <footer >

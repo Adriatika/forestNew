@@ -1,4 +1,5 @@
 .listedUp {
+  overflow: hidden;
   cursor: pointer;
   position: fixed;
   background-color: $main-color;
@@ -8,10 +9,40 @@
   width: 70px;
   height: 70px;
   z-index: 3;
+  color: white;
   svg {
     margin: auto;
     display: flex;
     height: 100%;
+  }
+  &:hover {
+    background-color: rgba($main-color, .38);
+    color: rgba(0, 53, 37, 0.87);
+    padding-top: 9px;
+    svg {
+      height: 32px;
+    }
+    span {
+      display: flex;
+    }
+  }
+  &:active {
+    background-color: rgba(0, 0, 0, 0.12);
+    color: white;
+    padding-top: 9px;
+    svg {
+      height: 32px;
+    }
+    span {
+      display: flex;
+    }
+  }
+  span {
+    font-size: 12px;
+    line-height: 16px;
+    display: none;
+    width: max-content;
+    margin: auto;
   }
 }
 

@@ -1,0 +1,218 @@
+.single {
+  margin-bottom: $wrapper-parts-margin;
+  display: grid;
+  column-gap: 30px;
+  row-gap: 25px;
+  align-items: start;
+  grid-template:
+    "breadcrumbs breadcrumbs foxyOne" auto
+    "mainImg mainImg foxyOne" auto
+    "mainImg mainImg anotherNews" auto
+    "mainImg mainImg foxyTwo" auto
+    "mainContent share foxyTwo" auto
+    "mainContent share readers"
+    "mainContent share foxyThree"
+    "mainContent share ."
+    "foxyLong share ."
+    "disqus . ."
+  / 7fr 2fr 3fr
+    ;
+  .breadcrumbs {
+    grid-area: breadcrumbs;
+  }
+
+  .verticalBlock {
+    grid-area: mainImg;
+    padding-left: 15px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    &__TextBlc {
+      p {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+      }
+    }
+    .dateAndViews {
+      .tags {
+        margin-left: 20px;
+      }
+    }
+  }
+  &__mainContent {
+    grid-area: mainContent;
+    > *:not(.wp-block-image) {
+      padding-left: 15px;
+    }
+    h2 {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid $main-color;
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+    }
+    h1 {
+      font-weight: normal;
+      font-size: 34px;
+      line-height: 48px;
+    }
+    img {
+      z-index: 2;
+      position: relative;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .alignleft, .alignright {
+      max-width: 250px;
+    }
+    .alignright {
+      margin-left: 30px;
+      float: right;
+    }
+    .alignleft {
+      margin-right: 30px;
+      float: left;
+    }
+    figcaption {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      color: #9f9f9f;
+      z-index: 2;
+      position: relative;
+    }
+    strong {
+      font-weight: bold;
+    }
+    table {
+      tbody {
+        tr:nth-child(odd) {
+          background-color: #F8F9FA;
+        }
+        tr {
+          td {
+            font-weight: normal;
+            padding: 5px 10px;
+          }
+        }
+      }
+      strong {
+        font-weight: normal;
+      }
+
+    }
+    .has-text-align-center {
+      text-align: center;
+    }
+    .has-text-align-right {
+      text-align: right;
+    }
+    .has-text-align-left {
+      text-align: left;
+    }
+    ul {
+      color: black;
+      margin-left: 15px;
+      li::marker {
+        color: $main-color;
+      }
+    }
+    blockquote {
+      border-radius: 0 5px 5px 5px;
+      margin-left: 15px;
+      padding: 40px 45px !important;
+      position: relative;
+      background: rgba($main-color, 0.38);
+      &:before {
+        content: '';
+        border: 10px solid rgba(56, 173, 74, 0.38);
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-radius: 6px 0 0 0;
+        position: absolute;
+        top: 0;
+        right: 100%;
+      }
+    }
+  }
+
+  .anotherNews {
+    grid-area: anotherNews;
+  }
+  .readersChoise {
+    grid-area: readers;
+  }
+  .sharingAndErrors {
+    grid-area: share;
+    position: sticky;
+    top: 25px;
+    .sharing {
+      background-color: rgba(0, 0, 0, 0.05);
+      padding: 25px 0;
+      border-radius: 5px;
+      margin-bottom: 25px;
+      span {
+        display: flex;
+        justify-content: center;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+      }
+      > .socialMedia {
+        margin: 25px auto 0 auto;
+        justify-content: space-around;
+      }
+      svg {
+        margin: 0;
+      }
+    }
+    .findErrors {
+      grid-area: errors;
+      border-radius: 5px;
+      padding: 30px 15px;
+      border: 1px solid $main-color;
+      .socialMedia {
+        margin-bottom: 15px;
+        width: 100%;
+        justify-content: center;
+      }
+      svg {
+        margin: 0;
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+
+  .foxyOne {
+    grid-area: foxyOne;
+  }
+  .foxyTwo {
+    grid-area: foxyTwo;
+  }
+  .foxyThree {
+    grid-area: foxyThree;
+  }
+  .foxyFour {
+    grid-area: foxyFour;
+  }
+  .foxyFive {
+    align-self: flex-end;
+    grid-area: foxyFive;
+  }
+  .foxyLong {
+    grid-area: foxyLong;
+  }
+  .disqus {
+    grid-area: disqus;
+  }
+
+}

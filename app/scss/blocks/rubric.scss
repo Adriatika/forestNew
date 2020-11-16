@@ -1,7 +1,9 @@
 .rubric {
+  margin-bottom: $wrapper-parts-margin;
   display: grid;
   column-gap: 30px;
   row-gap: 25px;
+  align-items: start;
   grid-template:
     "breadcrumbs breadcrumbs breadcrumbs foxyOne"
     "one one one foxyOne"
@@ -14,10 +16,37 @@
     "BarGreen BarGreen BarGreen newMag"
     "three three three newMag"
     "four four four foxyFour"
-
+    "four four four foxyFive"
+    "loadmore loadmore loadmore ."
+    "foxyLong foxyLong foxyLong foxyLong"
+    "sliderOne sliderOne sliderOne ."
+    "foxyFullTwo foxyFullTwo foxyFullTwo foxyFullTwo"
     / 1fr 1fr 1fr 1fr
 ;
   > .horizontalBar {
+    .imgBlock {
+      flex: 0 0 19%;
+      max-width: 19%;
+      padding-top: 14.6%;
+    }
+    >  div {
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+    }
+    .horizontalBar__Right {
+      > a:first-of-type {
+        font-size: 20px;
+        line-height: 28px;
+      }
+      > a:last-of-type {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
     .dateAndViews {
       div.tags {
         > a:first-child {
@@ -59,32 +88,6 @@
           }
         }
       }
-    }
-
-    .imgBlock {
-      flex: 0 0 19%;
-      max-width: 19%;
-      padding-top: 14.6%;
-    }
-    >  div {
-      padding-bottom: 25px;
-      margin-bottom: 25px;
-    }
-    .horizontalBar__Right {
-      > a:first-of-type {
-        font-size: 20px;
-        line-height: 28px;
-      }
-      > a:last-of-type {
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 20px;
-        &:hover {
-          text-decoration: none;
-        }
-      }
-    }
-    .dateAndViews {
       justify-content: space-between;
     }
   }
@@ -117,9 +120,37 @@
   .horizontalBarGreen {
     grid-area: BarGreen;
     > div {
-      padding: 25px 10px 25px 30px;
+      padding: 25px 10px 25px 20px;
       border: 3px solid $main-color;
       border-radius: 5px;
+      .horizontalBarFirst {
+        position: relative;
+        margin-right: 20px;
+      }
+    }
+    .greenTag {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: .01em;
+      color: white;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: $main-color;
+      padding: 5px 20px;
+      border-radius: 0;
+      &:before {
+        content: '';
+        border: 10px solid $main-color;
+        border-left-color: transparent;
+        border-radius: 6px 0 0 0;
+        border-bottom-color: transparent;
+        position: absolute;
+        top: 0;
+        right: 100%;
+      }
     }
   }
   .breadcrumbs {
@@ -139,11 +170,19 @@
     grid-area: foxyFour;
   }
   .foxyFive {
+    align-self: flex-end;
     grid-area: foxyFive;
   }
 
   .foxyFullOne {
     grid-area: foxyFullOne;
+  }
+  .foxyFullTwo {
+    grid-area: foxyFullTwo;
+  }
+
+  .foxyLong {
+    grid-area: foxyLong;
   }
 
   .anotherNews {
@@ -154,5 +193,134 @@
   }
   .movingPicturesBigOne {
     grid-area: sliderBigOne;
+  }
+
+  .movingPicturesOne {
+    grid-area: sliderOne;
+  }
+
+  .loadmore {
+    grid-area: loadmore;
+  }
+}
+
+@media (max-width: 1024px) {
+  .rubric {
+    .greenTag {
+      display: none;
+    }
+    > .horizontalBar {
+      .dateAndViews {
+        margin-top: 5px;
+        div.tags {
+          > a {
+            margin-bottom: 0;
+          }
+          > a:not(:first-child) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .rubric {
+    grid-template:
+    "breadcrumbs"
+    "one"
+    "foxyOne"
+    "anotherNews"
+    "foxyTwo"
+    "sliderBigOne"
+    "foxyFullOne"
+    "two"
+    "three"
+    "foxyFullTwo"
+    "four"
+    "BarGreen"
+    "loadmore"
+    "foxyThree"
+    "newMag"
+    "foxyFour"
+    "foxyLong"
+    "sliderOne"
+    "foxyFive"
+    / 1fr
+  ;
+  }
+}
+
+@media (max-width: 576px) {
+  .rubric {
+    .horizontalBarGreen {
+      > div {
+        > div {
+          flex-direction: column;
+          .imgBlock {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-top: 76.6%;
+          }
+        }
+      }
+      .greenTag {
+        display: flex;
+      }
+    }
+    .horizontalBar {
+      .horizontalBar__Right {
+        > a:first-of-type {
+          margin-right: 30px;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 24px;
+        }
+        > a:last-of-type {
+          display: none;
+        }
+      }
+    }
+    .horizontalBar1 {
+      > div:first-child {
+        > div {
+          flex-direction: column;
+          .imgBlock {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-top: 76.6%;
+          }
+        }
+        .horizontalBar__Right {
+          justify-content: space-between;
+          > * {
+            margin-bottom: 10px;
+          }
+          > a:first-of-type {
+            margin-top: 20px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+          }
+          >a:last-of-type {
+            display: block;
+          }
+          .dateAndViews {
+            div.tags {
+              > a:not(:first-child) {
+                display: inline-flex;
+              }
+            }
+          }
+        }
+        .imgBlock {
+          max-width: 40%;
+          flex: 0 0 40%;
+          padding-top: 30%;
+          margin-right: 35px;
+        }
+      }
+    }
   }
 }
