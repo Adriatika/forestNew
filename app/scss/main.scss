@@ -1,11 +1,18 @@
 @import "blocks/vars";
-@import "node_modules/bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 
 .container {
   max-width: 1310px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
+
 a {
+  text-decoration: none;
   color: black;
   &:hover {
     color: $main-color;
@@ -22,6 +29,7 @@ img {
 }
 
 body {
+  margin: 0;
   position: relative;
   color: black;
 }
@@ -75,4 +83,6 @@ body {
 @import "blocks/tags";
 @import "blocks/titles";
 @import "blocks/footer";
+@import "blocks/comments";
+@import "blocks/grade";
 @import "blocks/single";

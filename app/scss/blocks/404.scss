@@ -66,14 +66,8 @@
       }
     }
   }
-
-
-
-  .mainPageWrapper-part3 {
-    grid-template:
-    "centerArea lineArea rightArea foxyArea"
-    / 2fr 1px 2fr 1fr
-  ;
+  .movingPictures  {
+    margin-bottom: $wrapper-parts-margin;
   }
 
 }
@@ -91,6 +85,9 @@
         flex: 0 0 100%;
         max-width: 100%;
       }
+    }
+    .socialBlock {
+      margin-top: 40px;
     }
   }
 }
@@ -136,7 +133,10 @@
       }
     }
     .mainPageWrapper-part3 {
-      grid-template: "foxyArea foxyArea foxyArea" auto "centerArea lineArea rightArea" auto/1fr 1px 1fr;
+      grid-template:
+      "centerArea lineArea rightArea" auto
+      "foxyArea foxyArea foxyArea" auto
+      /1fr 1px 1fr;
     }
   }
 }
@@ -160,6 +160,11 @@
     }
     .header404 {
       grid-area: headerArea;
+      &__errorRight {
+        input{
+          padding-left: 15%;
+        }
+      }
     }
     .movingPicturesBigOne {
       grid-area: sliderOne;
@@ -193,6 +198,7 @@
     }
     .mainPageWrapper-part3 {
       grid-area: part3;
+      grid-template: "foxyArea" auto "centerArea" auto "rightArea" auto/1fr;
     }
     .mainPageWrapper-part4 {
       grid-template:

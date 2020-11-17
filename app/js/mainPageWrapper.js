@@ -147,7 +147,7 @@ function slider() {
   });
   let mySwiper3 = new Swiper('.mainPageWrapper-part6__sliderBot', {
     spaceBetween: 20,
-    slidesPerView: 4,
+    slidesPerView: 1.2,
     loop: false,
     navigation: {
       nextEl: '#mainPageWrapper-part6__sliderTopArrowRight',
@@ -164,14 +164,13 @@ function slider() {
   });
   let mySwiper4 = new Swiper('#partners-slider', {
     spaceBetween: 87,
-    slidesPerView: 4,
+    slidesPerView: 1.5,
     loop: false,
     navigation: {
       nextEl: '#partners-slider__sliderTopArrowRight',
       prevEl: '#partners-slider__sliderTopArrowLeft',
     },
     breakpoints: {
-
       768: {
         slidesPerView: 3,
       },

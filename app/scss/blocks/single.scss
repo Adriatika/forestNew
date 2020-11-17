@@ -4,24 +4,34 @@
   column-gap: 30px;
   row-gap: 25px;
   align-items: start;
+
   grid-template:
     "breadcrumbs breadcrumbs foxyOne" auto
     "mainImg mainImg foxyOne" auto
     "mainImg mainImg anotherNews" auto
     "mainImg mainImg foxyTwo" auto
     "mainContent share foxyTwo" auto
-    "mainContent share readers"
-    "mainContent share foxyThree"
+    "mainContent share readers" auto
+    "mainContent share foxyThree" auto
     "mainContent share ."
-    "foxyLong share ."
+    "foxyLong foxyLong foxyLong"
+    "comments comments ."
     "disqus . ."
+    "foxyFullOne foxyFullOne foxyFullOne"
+    "sliderOne sliderOne foxyFour"
+    "greenBlock greenBlock ."
+    "part3 part3 part3"
+    "foxyFullTwo foxyFullTwo foxyFullTwo"
   / 7fr 2fr 3fr
     ;
+  > .grade {
+    display: none;
+  }
   .breadcrumbs {
     grid-area: breadcrumbs;
   }
 
-  .verticalBlock {
+  .verticalBlockMain {
     grid-area: mainImg;
     padding-left: 15px;
     padding-bottom: 25px;
@@ -140,6 +150,9 @@
         right: 100%;
       }
     }
+    .wp-block-table {
+      overflow-x: auto;
+    }
   }
 
   .anotherNews {
@@ -150,13 +163,18 @@
   }
   .sharingAndErrors {
     grid-area: share;
-    position: sticky;
-    top: 25px;
+    height: 100%;
+    > div {
+
+      position: sticky;
+      top: 25px;
+    }
     .sharing {
       background-color: rgba(0, 0, 0, 0.05);
       padding: 25px 0;
       border-radius: 5px;
       margin-bottom: 25px;
+
       span {
         display: flex;
         justify-content: center;
@@ -190,7 +208,9 @@
       }
     }
   }
-
+  .greenBlock {
+    grid-area: greenBlock;
+  }
 
   .foxyOne {
     grid-area: foxyOne;
@@ -204,15 +224,130 @@
   .foxyFour {
     grid-area: foxyFour;
   }
-  .foxyFive {
-    align-self: flex-end;
-    grid-area: foxyFive;
+
+  .foxyFullOne {
+    grid-area: foxyFullOne;
   }
+  .foxyFullTwo {
+    grid-area: foxyFullTwo;
+  }
+
   .foxyLong {
     grid-area: foxyLong;
   }
+
   .disqus {
     grid-area: disqus;
   }
+  .comments {
+    grid-area: comments;
+  }
 
+  .movingPicturesOne {
+    margin: 0;
+    grid-area: sliderOne;
+  }
+
+  .mainPageWrapper-part3 {
+    grid-area: part3;
+    grid-template:
+    "centerArea lineArea rightArea foxyArea"
+    / 2fr 1px 2fr 1fr
+  ;
+  }
+}
+
+@media (max-width: 1024px) {
+  .single {
+    grid-template:
+    "breadcrumbs foxyOne" auto
+    "mainImg foxyOne" auto
+    "mainImg anotherNews" auto
+    "mainImg anotherNews" auto
+    "share anotherNews" auto
+    "mainContent foxyTwo" auto
+    "mainContent readers" auto
+    "mainContent foxyThree" auto
+    "mainContent ."
+    "foxyLong foxyLong"
+    "comments comments"
+    "disqus disqus"
+    "foxyFullOne foxyFullOne"
+    "sliderOne sliderOne"
+    "foxyFour foxyFour"
+    "greenBlock greenBlock"
+    "part3 part3"
+    "foxyFullTwo foxyFullTwo"
+  / 5fr 2fr
+  ;
+    .sharingAndErrors {
+      .sharing {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0;
+        span {
+          margin: auto 15px auto 0;
+        }
+        > .socialMedia {
+          margin: 0;
+        }
+      }
+    }
+
+    .findErrors {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .single {
+    grid-template:
+    "breadcrumbs"
+    "mainImg"
+    "share"
+    "mainContent"
+    "grade"
+    "foxyLong"
+    "comments"
+    "foxyOne"
+    "anotherNews"
+    "foxyTwo"
+    "sliderOne"
+    "foxyThree"
+    "greenBlock"
+    "foxyFour"
+    "part3"
+  / 1fr
+  ;
+    &__mainContent {
+      overflow-x: auto;
+      > *:not(.wp-block-image) {
+        padding-left: 0;
+      }
+    }
+    .mainPageWrapper-part3 {
+      grid-template:  "centerArea lineArea rightArea" auto "foxyArea foxyArea foxyArea"  auto/1fr 1px 1fr;
+    }
+    > .grade {
+      grid-area: grade;
+      display: flex;
+    }
+    .comments {
+      .grade {
+        display: none;
+      }
+    }
+    .disqus, .readersChoise, .foxyFullOne, .foxyFullTwo {
+      display: none;
+    }
+  }
+}
+@media all and (max-width: 768px) {
+  .single {
+    .mainPageWrapper-part3 {
+
+      grid-template: "centerArea" auto "rightArea" auto "foxyArea" auto /1fr;
+    }
+  }
 }

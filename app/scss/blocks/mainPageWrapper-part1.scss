@@ -1,11 +1,7 @@
 .mainPageWrapper-part1 {
   margin-bottom: $wrapper-parts-margin;
-
-  .horizontalBar {
-    .imgBlock {
-      //padding-top: 22.6%;
-    }
-  }
+  display: flex;
+  flex-wrap: wrap;
 
   &__center {
     display: flex;

@@ -1,0 +1,31 @@
+.comments {
+  &__radio {
+    display: none;
+  }
+  &__commentTab {
+    border-radius: 5px;
+    border: 2px solid $main-color;
+  }
+  #blockVk, #blockFb {
+    display: none;
+  }
+  label {
+    background-color: rgba(0, 0, 0, 0.05);;
+    color: rgba(0, 0, 0, 0.38);
+    font-size: 16px;
+    line-height: 24px;
+    padding: 15px 25px;
+    margin-bottom: 0;
+    border-radius: 5px 5px 0 0;
+  }
+  label:first-of-type {
+    margin-left: 20px;
+  }
+  #fbComment:checked ~ div#blockFb, #vkComment:checked ~ div#blockVk {
+    display: block;
+  }
+  #fbComment:checked ~ .comments__fb, #vkComment:checked ~ .comments__vk {
+    background-color: $main-color;
+    color: white;
+  }
+}

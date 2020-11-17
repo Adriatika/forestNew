@@ -1,7 +1,7 @@
 .socialBlock {
   position: relative;
   margin: 10px 0 0 0;
-  padding: 20px 40px;
+  padding: 5px 40px;
   border-radius: 0 5px 5px 5px;
   border: 2px solid #e0e0e0;
   display: flex;
@@ -63,9 +63,6 @@
 
 @media (max-width: 576px) {
   .socialBlock {
-    > div {
-      margin: 15px 0;
-    }
     svg {
       width: 27px !important;
     }

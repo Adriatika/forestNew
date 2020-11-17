@@ -1,0 +1,34 @@
+.grade {
+  margin-left: 15px;
+  display: inline-flex;
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    color: $dark-theme;
+  }
+  p, .socialMedia {
+    margin: 0;
+  }
+  .socialMedia {
+    svg {
+      cursor: pointer;
+      color: rgba(black, .12);
+    }
+    margin-left: 15px;
+  }
+
+}
+.grade:hover {
+  .socialMedia {
+    a:first-of-type {
+      svg {
+        color: $dark-theme;
+      }
+    }
+    a:last-of-type {
+      svg {
+        color: $main-color;
+      }
+    }
+  }
+}
