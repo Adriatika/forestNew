@@ -69,7 +69,12 @@
   .movingPictures  {
     margin-bottom: $wrapper-parts-margin;
   }
-
+  .mainPageWrapper-part1 {
+    grid-template:
+  "left mid mid foxy"
+  /4fr 3fr 2fr 3fr
+  ;
+  }
 }
 .page404Bot {
   .mainPageWrapper-part7 {
@@ -80,11 +85,11 @@
 @media (max-width: 1024px) {
   .page404 {
     .mainPageWrapper-part1 {
-      .foxy {
-        margin-top: 15px;
-        flex: 0 0 100%;
-        max-width: 100%;
-      }
+      grid-template:
+      "left mid"
+      "foxy foxy"
+      /4fr 5fr
+    ;
     }
     .socialBlock {
       margin-top: 40px;
@@ -118,19 +123,12 @@
       }
     }
     .mainPageWrapper-part1 {
-      > div {
-        margin-bottom: 20px;
-      }
-      &__left {
-        order: 2;
-      }
-      &__mid {
-        min-height: 650px;
-        order: 1;
-      }
-      .foxy {
-        order: 3;
-      }
+      grid-template:
+      "mid" .7fr
+      "foxy" auto
+      "left" 1fr
+      /1fr
+    ;
     }
     .mainPageWrapper-part3 {
       grid-template:

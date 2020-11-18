@@ -35,6 +35,14 @@ header {
   display: flex;
   margin: 0 0 24px 0;
   padding: 0;
+  position: relative;
+  align-items: center;
+  flex-flow: row nowrap;
+  .navbar-toggler {
+    border: none;
+    background-color: transparent;
+    display: none;
+  }
   .navbar-toggler-icon {
     width: 41px;
     height: 41px;
@@ -44,6 +52,12 @@ header {
   }
   .navbar-brand {
     max-width: 300px;
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    line-height: inherit;
+    white-space: nowrap;
     svg.logo {
       width: 100%;
       max-height: 80px;
@@ -53,10 +67,17 @@ header {
     width: 100%;
     justify-content: space-around;
     padding:  0 25px;
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    flex-direction: row;
     .nav-item {
       display: flex;
       align-items: center;
       a {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
         text-align: center;
         &:hover {
           color: $main-color;
@@ -64,6 +85,12 @@ header {
       }
     }
 
+  }
+  .navbar-collapse {
+    display: flex;
+    flex-basis: auto;
+    align-items: center;
+    flex-grow: 1;
   }
   .navbar-collapse:not(.collapse){
     display: flex;
@@ -73,10 +100,14 @@ header {
     width: 24px;
     height: 24px;
   }
+  .form-inline {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+  }
   label {
     position: relative;
   }
-
   label:before {
     content: "";
     position: absolute;
@@ -88,9 +119,14 @@ header {
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill-opacity='0.12' viewBox='0 0 24 24' fill-rule='evenodd'%3E%3Cpath d='M14.9649 14.255H15.7549L20.7449 19.255L19.2549 20.745L14.2549 15.755V14.965L13.9849 14.685C12.8449 15.665 11.3649 16.255 9.75488 16.255C6.16488 16.255 3.25488 13.345 3.25488 9.755C3.25488 6.165 6.16488 3.255 9.75488 3.255C13.3449 3.255 16.2549 6.165 16.2549 9.755C16.2549 11.365 15.6649 12.845 14.6849 13.985L14.9649 14.255ZM5.25488 9.755C5.25488 12.245 7.26488 14.255 9.75488 14.255C12.2449 14.255 14.2549 12.245 14.2549 9.755C14.2549 7.26501 12.2449 5.255 9.75488 5.255C7.26488 5.255 5.25488 7.26501 5.25488 9.755Z'%3E%3C/path%3E%3C/svg%3E") center / contain no-repeat;
   }
   input {
+    display: inline-block;
+    width: auto;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    line-height: 1.5;
     background: rgba(0, 0, 0, 0.07);
     font-size: 12px;
-    color: rgba(0, 0, 0, 0.38);
+    color: black;
     border-radius: 5px;
     font-weight: 400;
     padding-left: 2rem;
@@ -118,6 +154,7 @@ header {
     display: none;
   }
   .dropdown-menu.top_dropHidden {
+    display: none;
     border: none;
     flex-direction: column;
 
@@ -127,7 +164,18 @@ header {
     }
   }
 }
-
+.nav-item {
+  display: flex;
+  align-items: center;
+  a {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    text-align: center;
+  }
+}
+.nav-item.dropdown {
+  position: relative;
+}
 .menu {
   background-color: $main-color;
   a {
@@ -142,11 +190,12 @@ header {
     grid-template-columns: repeat(9, auto);
     list-style-type: none;
     padding: 0;
-
+    margin-top: 0;
     margin-bottom: 0;
     li {
       border-left: 1px solid white;
       a {
+        padding: .5rem 1rem;
         display: flex;
         flex-wrap: wrap;
       }
@@ -166,11 +215,19 @@ header {
       background-color: rgba(255, 255, 255, 0.38);
     }
   }
-  .whiteStick {
-    height: 40px;
-    border-right: 1px solid #FFFFFF;
-  }
   .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
     border-radius: 0;
     border: 0;
     margin: 0;
@@ -185,6 +242,10 @@ header {
       background: rgba(56, 173, 74, 0.38);
     }
     a {
+      width: 100%;
+      clear: both;
+      border: 0;
+      white-space: nowrap;
       display: flex;
       justify-content: center;
       padding: 16px 0;
@@ -214,13 +275,26 @@ header {
 
 @media (max-width: 992px) {
   .header {
+    .socialMedia {
+      width: auto;
+    }
+    .form-inline {
+      margin-bottom: 15px;
+    }
     position: relative;
     padding-bottom: 32px;
     box-shadow: 0px 0.4px 0.8px rgba(0, 0, 0, 0.1), 0px 3px 6px rgba(0, 0, 0, 0.2);
   }
   .navbar {
     position: initial;
+    justify-content: space-between;
     margin-bottom: 0;
+    .navbar-toggler {
+      display: block;
+    }
+    .navbar-collapse {
+      display: none;
+    }
   }
 
   #navbarSupportedContent {
@@ -240,6 +314,19 @@ header {
         list-style-type: none;
         padding: 0;
         margin-top: 0;
+        li.nav-item.dropdown {
+          flex-direction: column;
+          width: 100%;
+          a {
+            width: 100%;
+          }
+          .dropdown-menu {
+            width: 100%;
+            a {
+              text-align: start;
+            }
+          }
+        }
         a {
           padding: 5px 0 5px 0;
         }
@@ -271,17 +358,6 @@ header {
   }
   .menu {
     display: none;
-  }
-}
-
-@media (max-width: 992px) {
-  .header {
-    .socialMedia {
-      width: auto;
-    }
-    .form-inline {
-      margin-bottom: 15px;
-    }
   }
 }
 

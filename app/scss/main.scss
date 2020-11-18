@@ -1,5 +1,5 @@
 @import "blocks/vars";
-@import "bootstrap/scss/bootstrap";
+//@import "bootstrap/scss/bootstrap";
 
 .container {
   max-width: 1310px;
@@ -9,7 +9,6 @@
   margin-right: auto;
   margin-left: auto;
 }
-
 
 a {
   text-decoration: none;
@@ -40,6 +39,12 @@ body {
   font-family: 'Roboto', sans-serif;
   line-height: $line-height;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box; // 1
+}
+
 
 @import "blocks/header";
 @import "blocks/mainPageWrapper-part1";

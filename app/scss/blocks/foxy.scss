@@ -44,12 +44,13 @@
   .foxyLong {
     min-width: 0;
   }
-}
-
-@media (max-width: 576px) {
   .foxy {
     margin: auto;
   }
+}
+
+@media (max-width: 576px) {
+
   .foxyFull {
     a {
       height: 65px;
