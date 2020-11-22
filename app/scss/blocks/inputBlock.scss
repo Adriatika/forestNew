@@ -65,7 +65,7 @@
     align-self: center;
   }
   input:checked+label::before {
-    background-image: url("../img/checked.svg");
+    background-image: url("img/checked.svg");
     background-size: 100%;
   }
 }

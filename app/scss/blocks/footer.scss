@@ -11,6 +11,12 @@ footer {
           "five six six six"
   /1.5fr 1fr 1.5fr 1fr
   ;
+    li:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+    li {
+      list-style: none;
+    }
     a {
       font-weight: 500;
       font-size: 13px;
@@ -20,9 +26,6 @@ footer {
       &:hover {
         color: $main-color;
       }
-    }
-    a:not(:last-of-type) {
-      margin-bottom: 10px;
     }
     > div {
       display: flex;
@@ -43,8 +46,8 @@ footer {
     }
     &__three {
       grid-area: three;
-      a:nth-child(2) {
-        margin-bottom: 50px;
+      > a {
+        margin-top: 50px;
       }
       .button {
         width: max-content;

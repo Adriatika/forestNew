@@ -10,7 +10,7 @@
   /4fr 3fr 2fr 3fr
 ;
 
-  &__left {
+  > .horizontalBar {
     grid-area: left;
   }
 
@@ -73,7 +73,7 @@
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) -70.79%, #FFFFFF 63.53%);
       &:before {
         content: '';
-        background: url("../img/doubleArrowsDown.svg");
+        background: url("img/doubleArrowsDown.svg");
         width: 26px;
         height: 20px;
         display: flex;
@@ -218,7 +218,7 @@
       }
 
     }
-    &__left {
+    > .horizontalBar {
       margin-top: 23px;
       > a {
         img {

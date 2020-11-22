@@ -13,8 +13,8 @@ header {
   align-items: center;
 
 }
-.hidden-toggle.green:after{
-  content: url(../img/arrowToggleDown.svg);
+.hiddenMenu .dropdown > a.green:after{
+  content: url(img/arrowToggleDown.svg);
   border: none;
   margin-left: 15px;
   width: 15px;
@@ -22,8 +22,8 @@ header {
   display: inline-flex;
   align-items: center;
 }
-.hidden-toggle:after{
-  content: url(../img/arrowToggle.svg);
+.hiddenMenu .dropdown > a:after{
+  content: url(img/arrowToggle.svg);
   border: none;
   margin-left: 15px;
   width: 15px;
@@ -72,10 +72,11 @@ header {
     margin-bottom: 0;
     list-style: none;
     flex-direction: row;
-    .nav-item {
+    li {
       display: flex;
       align-items: center;
       a {
+        text-transform: uppercase;
         padding-top: .5rem;
         padding-bottom: .5rem;
         text-align: center;
@@ -173,12 +174,14 @@ header {
     text-align: center;
   }
 }
-.nav-item.dropdown {
+.dropdown {
+  cursor: pointer;
   position: relative;
 }
 .menu {
   background-color: $main-color;
   a {
+    text-transform: uppercase;
     color: white;
     font-weight: 500;
     font-size: 13px;
@@ -203,10 +206,10 @@ header {
     li:last-of-type {
       border-right: 1px solid white;
     }
-    li:hover {
+    > li:hover {
       color: white;
       background-color: rgba(255, 255, 255, 0.38);
-      a:not(.dropdown-item) {
+       >a {
         color: white;
       }
     }
@@ -215,7 +218,7 @@ header {
       background-color: rgba(255, 255, 255, 0.38);
     }
   }
-  .dropdown-menu {
+  .sub-menu {
     position: absolute;
     top: 100%;
     left: 0;
@@ -233,7 +236,9 @@ header {
     margin: 0;
     min-width: 100%;
     padding: 0;
-    left: 0;
+    > li:not(:last-child) {
+      margin-bottom: 1px;
+    }
     a:active {
       color: black;
       background: rgba(56, 173, 74, 0.38);
@@ -262,12 +267,11 @@ header {
       margin-bottom: 1px;
     }
   }
-  .dropdown-toggle:after{
-    content: url(../img/arrowTogglerWhite.svg);
+  .dropdown > a:after{
+    content: url(img/arrowTogglerWhite.svg);
     border: none;
     margin-left: 15px;
     width: 15px;
-    height: 7px;
     display: inline-flex;
     align-items: center;
   }
@@ -310,17 +314,23 @@ header {
     flex-direction: column;
     align-items: flex-start;
     .hiddenMenu {
+      li {
+        margin-bottom: 10px;
+      }
       ul {
         list-style-type: none;
         padding: 0;
         margin-top: 0;
-        li.nav-item.dropdown {
+        li.dropdown {
           flex-direction: column;
           width: 100%;
           a {
+            color: $main-color;
             width: 100%;
           }
-          .dropdown-menu {
+          .sub-menu {
+            margin-top: 10px;
+            display: none;
             width: 100%;
             a {
               text-align: start;
@@ -329,6 +339,12 @@ header {
         }
         a {
           padding: 5px 0 5px 0;
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 24px;
+          letter-spacing: 0.01em;
+          text-transform: uppercase;
+          color: rgba(0, 0, 0, 0.38);
         }
       }
       flex-direction: column;

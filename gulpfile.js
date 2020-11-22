@@ -40,8 +40,8 @@ function styles() {
     .pipe(
       cleancss({ level: { 1: { specialComments: 0 } }, /*format: "beautify"*/ })
     )
-    .pipe(dest('C:\\Users\\hahle\\OneDrive\\Documents\\code\\leskGulp\\app\\html\\style'))
-    // .pipe(dest("C:\\Users\\hahle\\OneDrive\\Documents\\code\\lesk\\assets"))  // выгрузка
+    .pipe(dest('C:\\Users\\hahle\\OneDrive\\Documents\\code\\leskGulp\\app\\html'))
+    .pipe(dest("C:\\xampp\\htdocs\\lesk\\wp-content\\themes\\forest"))
     .pipe(browserSync.stream());
 }
 
@@ -51,6 +51,7 @@ function scripts() {
     .pipe(concat("app.min.js"))
     .pipe(uglify())
     .pipe(dest("app/html/js/"))
+    .pipe(dest("C:\\xampp\\htdocs\\lesk\\wp-content\\themes\\forest\\js"))
     .pipe(browserSync.stream());
 }
 
