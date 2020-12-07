@@ -153,6 +153,7 @@
     grid-area: greenBlock;
   }
   .sliderMini {
+    margin-top: 0;
     grid-area: sliderMini;
     &__Slide {
       > div {
