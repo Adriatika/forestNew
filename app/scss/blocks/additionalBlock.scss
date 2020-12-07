@@ -1,0 +1,48 @@
+.additionalBlock {
+  grid-area: addi;
+  .article-loaded {
+    display: grid;
+    column-gap: $my-column-gap;
+    row-gap: $my-row-gap;
+    grid-template:
+      "mainImg mainImg ."
+      "mainContent share ."
+      /7fr 2fr 3fr
+  ;
+  }
+  .article-loaded:not(:last-child) {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .additionalBlock {
+    .article-loaded {
+      grid-template:
+      "mainImg  ."
+      "share ."
+      "mainContent  ."
+      /5fr 2fr
+    ;
+    }
+    .article-loaded:not(:last-child) {
+      margin-bottom: 75px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .additionalBlock {
+    .article-loaded {
+      grid-template:
+      "mainImg"
+      "share"
+      "mainContent"
+      /1fr
+    ;
+    }
+    .article-loaded:not(:last-child) {
+      margin-bottom: 75px;
+    }
+  }
+}

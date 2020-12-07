@@ -12,6 +12,15 @@
 
   > .horizontalBar {
     grid-area: left;
+    > div {
+      > a {
+        .horizontalBarFirst {
+          flex: 0 0 31%;
+          max-width: 31%;
+          padding-top: 23.6%;
+        }
+      }
+    }
   }
 
   &__mid {
@@ -89,7 +98,7 @@
       position: relative;
     }
      div#scroll {
-      max-height: 500px;
+      max-height: 475px;
       overflow-y: auto;
       scrollbar-width: thin;
       padding-right: 15px;
@@ -139,7 +148,6 @@
 
   .foxy {
     grid-area: foxy;
-
   }
 
   .foxyLong {
