@@ -1,0 +1,213 @@
+.bigSubForm {
+  position: relative;
+  background-color: $main-color;
+  //margin-bottom: $wrapper-parts-margin;
+  &__middle {
+    position: absolute;
+    background: url("img/woodMiddle.png") 50% 100% no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: .07;
+    bottom: 0;
+  }
+  &__left {
+    position: absolute;
+    background: url("img/woodSide.png") 0 100% no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: .1;
+    bottom: 0;
+  }
+  &__right {
+    position: absolute;
+    transform: scale(-1, 1);
+    background: url("img/woodSide.png") 0 100% no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: .1;
+    bottom: 0;
+  }
+
+  .container {
+    padding: 20px 15px;
+    position: relative;
+    z-index: 3;
+    display: grid;
+    column-gap: 300px;
+    grid-template:
+    "titleArea imgArea "
+    "formArea imgArea"
+    / 1fr 1fr
+  ;
+
+    > div:first-child {
+      grid-area: titleArea;
+      display: flex;
+      flex-direction: column;
+      margin: auto 0;
+      flex: 0 0 40%;
+      p:first-of-type {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        color: rgba(255, 255, 255, 0.87);
+      }
+      p:last-of-type {
+        font-size: 14px;
+        line-height: 20px;
+        color: white;
+      }
+    }
+
+    .wpcf7 {
+      grid-area: formArea;
+    }
+
+    form {
+      .button {
+        color: $main-color;
+        background-color: white;
+        &:hover {
+          background-color: $main-color;
+          color: white;
+        }
+        &:active {
+          background-color: $main-color12;
+          color: rgba(black, .38);
+        }
+      }
+      > p {
+        width: 100%;
+      }
+      label {
+        font-size: 14px;
+        line-height: 20px;
+        color: rgba(255, 255, 255, 0.38);
+      }
+      input:not(.button) {
+        &::placeholder {
+          color: white;
+        }
+        color: white;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.38);
+      }
+      .bigSubForm__button {
+        display: flex;
+        justify-content: space-between;
+        > p {
+          margin-top: 15px;
+          label {
+            span {
+              font-size: 12px;
+              line-height: 16px;
+              color: white;
+            }
+          }
+        }
+      }
+      .privacy {
+        .wpcf7-list-item {
+          position: relative;
+          display: flex;
+        }
+        input {
+          position: absolute;
+          z-index: -1;
+          opacity: 0;
+          display: inline-flex;
+          align-self: center;
+        }
+        .wpcf7-list-item-label {
+          display: inline;
+          margin: 0 0 0 10px;
+          a {
+            font-size: 12px;
+            line-height: 16px;
+            color: #fff;
+            text-decoration: underline;
+          }
+        }
+        .wpcf7-list-item-label::before {
+          content: '';
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          flex-shrink: 0;
+          flex-grow: 0;
+          border: 2px solid rgba(0, 0, 0, 0.12);;
+          margin-right: 15px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: 50% 50%;
+          align-self: center;
+        }
+         input:checked+ .wpcf7-list-item-label::before {
+          background-image: url("img/checked.svg");
+          background-size: 100%;
+         background-color: #5353535c;
+        }
+      }
+    }
+
+    > div:last-child {
+      grid-area: imgArea;
+      flex: 0 0 40%;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .bigSubForm {
+    .container {
+      grid-template:
+    "titleArea"
+    "imgArea"
+    "formArea"
+    / 1fr
+    ;
+      > div:last-child {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        img {
+          display: flex;
+          margin: auto;
+          max-width: 300px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px){
+ .bigSubForm {
+   .input-text, input[type=email], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], textarea {
+     width: 100%;
+   }
+
+   span.wpcf7-list-item {
+     display: block;
+     margin: 20px 0 0 1em;
+   }
+ }
+}
+@media (max-width: 576px) {
+  .bigSubForm {
+    .container {
+      form {
+        .bigSubForm__button {
+          flex-direction: column-reverse;
+          span.wpcf7-form-control-wrap.privacy .wpcf7-list-item {
+            margin: 0;
+            .wpcf7-list-item-label {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

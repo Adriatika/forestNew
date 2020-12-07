@@ -1,4 +1,6 @@
 .listedUp {
+  display: none;
+  opacity: 0;
   overflow: hidden;
   cursor: pointer;
   position: fixed;
@@ -44,6 +46,10 @@
     width: max-content;
     margin: auto;
   }
+}
+
+.listedUp.visible {
+  opacity: 1;
 }
 
 @media (min-width: 1800px) {

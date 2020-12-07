@@ -1,0 +1,94 @@
+.rubric.issue {
+  grid-template:
+    "breadcrumbs breadcrumbs breadcrumbs foxyOne"
+    "zero zero zero foxyOne"
+    "one one one anotherNews"
+    "one one one foxyTwo"
+    "sliderBigOne sliderBigOne sliderBigOne sliderBigOne"
+    "foxyFullOne foxyFullOne foxyFullOne foxyFullOne"
+    "two two two foxyThree"
+    "two two two newMag"
+    "BarGreen BarGreen BarGreen newMag"
+    "three three three newMag"
+    "four four four foxyFour"
+    "four four four foxyFive"
+    "loadmore loadmore loadmore ."
+    "foxyLong foxyLong foxyLong foxyLong"
+    "sliderOne sliderOne sliderOne ."
+    "foxyFullTwo foxyFullTwo foxyFullTwo foxyFullTwo"
+    / 1fr 1fr 1fr 1fr
+;
+  .horizontalBar.horizontalBarIssue {
+    grid-area: zero;
+    .imgBlock {
+      flex: 0 0 33%;
+      max-width: 33%;
+      padding-top: 44.6%;
+      margin-right: 35px;
+    }
+    .horizontalBar__Right {
+      margin-bottom: 55px;
+      .h2Title {
+        border-bottom: 2px solid $dark-theme;
+      }
+      p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+      }
+      a {
+        cursor: pointer;
+        color: $dark-theme;
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 500;
+      }
+    }
+  }
+  .horizontalBar1 > div:first-child .imgBlock {
+    flex: 0 0 19%;
+    max-width: 19%;
+    padding-top: 14.6%;
+    margin-right: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .rubric.issue {
+    grid-template:
+    "breadcrumbs"
+    "zero"
+    "one"
+    "foxyOne"
+    "anotherNews"
+    "foxyTwo"
+    "sliderBigOne"
+    "foxyFullOne"
+    "two"
+    "three"
+    "foxyFullTwo"
+    "four"
+    "BarGreen"
+    "loadmore"
+    "foxyThree"
+    "newMag"
+    "foxyFour"
+    "foxyLong"
+    "sliderOne"
+    "foxyFive"
+    / 1fr
+  ;
+    .horizontalBar.horizontalBarIssue {
+      .horizontalBar__Right {
+        .h2Title {
+          display: none;
+        }
+      }
+    }
+    .horizontalBar1 > div:first-child .imgBlock {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding-top: 76.6%;
+      margin-right: 0;
+    }
+  }
+}

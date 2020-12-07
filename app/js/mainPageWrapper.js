@@ -1,5 +1,9 @@
+let opacity = 1;
+let arrow = ''
+let bottom = ''
+let blc = document.querySelector('#scroll')
+
 function extend() {
-  blc = document.querySelector('#scroll')
   arrow = document.querySelector('.mainPageWrapper-part1__rightArrowDown')
   blc.removeEventListener('wheel', check)
   arrow.style.display = 'none'
@@ -7,7 +11,6 @@ function extend() {
 }
 
 function scrollWatch() {
-  blc = document.querySelector('#scroll')
   arrow = document.querySelector('.mainPageWrapper-part1__rightArrowDown')
   blc.addEventListener('wheel', check)
 }
@@ -32,14 +35,11 @@ function check(event) {
   }
 }
 
-let opacity = 1;
-let arrow = ''
-let bottom = ''
-let blc = ''
-document.addEventListener('DOMContentLoaded', scrollWatch)
+if(blc) {
+	document.addEventListener('DOMContentLoaded', scrollWatch)
+}
 
 document.addEventListener('DOMContentLoaded', slider)
-
 function slider() {
   let movingPictures1 = new Swiper('#movingPicturesOne', {
     spaceBetween: 10,
@@ -95,8 +95,8 @@ function slider() {
     watchSlidesProgress: true,
     loop: false,
     navigation: {
-      nextEl: '#movingPicturesBigOneArrowRight',
-      prevEl: '#movingPicturesBigOneArrowLeft',
+      nextEl: '#movingPicturesBigOneTopArrowRight',
+      prevEl: '#movingPicturesBigOneTopArrowLeft',
     },
     breakpoints: {
       768: {
@@ -118,8 +118,8 @@ function slider() {
     watchSlidesProgress: true,
     loop: false,
     navigation: {
-      nextEl: '#movingPicturesBigTwoArrowRight',
-      prevEl: '#movingPicturesBigTwoArrowLeft',
+      nextEl: '#movingPicturesBigTwoTopArrowRight',
+      prevEl: '#movingPicturesBigTwoTopArrowLeft',
     },
     breakpoints: {
       768: {
@@ -157,6 +157,9 @@ function slider() {
       360: {
         slidesPerView: 1.5,
       },
+			768: {
+				slidesPerView: 3,
+			},
       1280: {
         slidesPerView: 4,
       },
@@ -200,9 +203,41 @@ function closeModal() {
   modal.style.opacity = '0'
 }
 
-function toUp() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+let arrowUp= ''
+let getArrowUpObj = {
+	on: function () {
+		arrowUp.style.display = 'block'
+		setTimeout(() =>arrowUp.classList.add('visible'), 500)
+	},
+	off: function () {
+		arrowUp.classList.remove('visible')
+		setTimeout(() =>arrowUp.style.display = '', 500)
+	},
+	getArrowUp: function () {
+		arrowUp = document.querySelector('.listedUp')
+		document.addEventListener('scroll', getArrowUpObj.onScroll)
+	},
+	onScroll: function () {
+		if(pageYOffset > 700) {
+			if(!arrowUp.classList.contains('visible')) {
+				getArrowUpObj.on()
+			}
+		} else if(pageYOffset < 400) {
+			if(arrowUp.classList.contains('visible')) {
+				getArrowUpObj.off()
+			}
+		}
+	},
+	toUp: function () {
+		document.removeEventListener('scroll',getArrowUpObj.onScroll)
+		getArrowUpObj.off()
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth"
+		});
+		setTimeout(() => document.addEventListener('scroll', getArrowUpObj.onScroll), 2000)
+	},
+}
+if(document.documentElement.clientWidth > 768) {
+	document.addEventListener('DOMContentLoaded', getArrowUpObj.getArrowUp)
 }

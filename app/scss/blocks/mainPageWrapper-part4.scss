@@ -1,7 +1,8 @@
 .mainPageWrapper-part4 {
   margin-bottom: $wrapper-parts-margin;
   display: grid;
-  column-gap: 20px;
+  row-gap: $my-row-gap;
+  column-gap: $my-column-gap;
   grid-template:
     "leftArea centerArea rightArea"
     "foxyArea foxyArea foxyArea"
@@ -15,8 +16,7 @@
     grid-area: rightArea;
   }
 
-  &__foxy {
-    margin-top: 40px;
+  .foxyFull {
     grid-area: foxyArea;
   }
 }
@@ -36,7 +36,7 @@
 
 @media (max-width: 576px) {
   .mainPageWrapper-part4 {
-    row-gap: 30px;
+    row-gap: $my-row-gap;
     grid-template:
     "centerArea"
     "rightArea"
@@ -46,7 +46,7 @@
     .sliderMini {
       min-height: 300px;
     }
-    &__foxy {
+    .foxyFull {
       margin-top: 0;
     }
   }

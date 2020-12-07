@@ -1,32 +1,29 @@
 .events {
   margin-bottom: $wrapper-parts-margin;
-  column-gap: 30px;
+  column-gap: $my-column-gap;
+  row-gap: $my-row-gap;
   display: grid;
   align-items: start;
   grid-template:
-    "breadcrumbs breadcrumbs breadcrumbs foxyOne"
-    "one one one foxyOne"
-    "one one one news"
-    "one one one news"
-    "two two two newMag"
+    "breadcrumbs breadcrumbs breadcrumbs foxyOne" auto
+    "one one one foxyOne" auto
+    "one one one news" auto
+    "one one one newMag" auto
+    "two two two newMag" auto
     "sliderOne sliderOne sliderOne foxyTwo"
     "foxyFullOne foxyFullOne foxyFullOne foxyFullOne"
     "h2Title h2Title h2Title foxyThree"
     "verticalOne verticalTwo verticalThree foxyThree"
-    "verticalOne verticalTwo verticalThree quiz"
-    "verticalOne verticalTwo verticalThree foxyFour"
-    "verticalFour verticalFive verticalSix foxyFour"
+    "verticalOne verticalTwo verticalThree quiz" auto
+    "verticalFour verticalFive verticalSix foxyFour" auto
     "verticalFour verticalFive verticalSix anotherNews"
-    "pagination pagination pagination foxyFive"
     "sliderTwo sliderTwo sliderTwo foxyFive"
     "foxyFullTwo foxyFullTwo foxyFullTwo foxyFullTwo"
     "sliderThree sliderThree sliderThree sliderThree"
     "foxyLong foxyLong foxyLong foxyLong"
     / 1fr 1fr 1fr 1fr
 ;
-  > div, > h2 {
-    margin-top: 25px;
-  }
+
   .horizontalBar1, .horizontalBar2 {
     .imgBlock {
       flex: 0 0 29%;
@@ -87,6 +84,9 @@
   }
   .foxyFullTwo {
     grid-area: foxyFullTwo;
+  }
+  .tags {
+    margin-left: 0;
   }
   .verticalBlock {
     a:hover {
@@ -150,7 +150,6 @@
     "verticalOne verticalTwo verticalThree foxyFour"
     "verticalFour verticalFive verticalSix foxyFour"
     "verticalFour verticalFive verticalSix anotherNews"
-    "pagination pagination pagination foxyFive"
     "sliderTwo sliderTwo sliderTwo foxyFive"
     "foxyFullTwo foxyFullTwo foxyFullTwo foxyFullTwo"
     "sliderThree sliderThree sliderThree sliderThree"
@@ -177,7 +176,7 @@
 @media (max-width: 900px) {
   .events {
     align-items: center;
-    row-gap: 30px;
+    row-gap: $my-row-gap;
     grid-template:
     "breadcrumbs"
     "one"
@@ -195,7 +194,6 @@
     "foxyFour"
     "verticalTwo"
     "verticalThree"
-    "pagination"
     "foxyFive"
     "sliderTwo"
     "foxyLong"

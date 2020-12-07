@@ -1,5 +1,5 @@
 .pagination {
-  a {
+  a, span {
     font-weight: normal;
     font-size: 13px;
     line-height: 23px;
@@ -11,7 +11,7 @@
       text-decoration: none;
     }
   }
-  a.active {
+  span.current {
     border-bottom: 1px solid rgba(0, 0, 0, 0.38);
   }
 }

@@ -9,6 +9,13 @@
 }
 
 .views {
+  >div {
+    margin-left: 3px;
+    span {
+      vertical-align: super;
+    }
+  }
+  display: inline-flex;
   margin-left: 30px;
   &:before {
     content: '';

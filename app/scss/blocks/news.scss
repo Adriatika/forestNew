@@ -2,8 +2,8 @@
   margin-bottom: $wrapper-parts-margin;
   padding-top: 15px;
   display: grid;
-  row-gap: 25px;
-  column-gap: 30px;
+  row-gap: $my-row-gap;
+  column-gap: $my-column-gap;
   grid-template:
     "breadcrumbs breadcrumbs breadcrumbs foxyOne"
     "one one one foxyOne"
@@ -15,11 +15,10 @@
     "foxyFullOne foxyFullOne foxyFullOne foxyFullOne"
     "three three three foxyThree"
     "three three three anotherNews"
-    "four four four anotherNews"
-    "four four four anotherNews"
-    "four four four foxyFour"
-    "five five five foxyFour"
-    "five five five newMag"
+    "four four four anotherNews" auto
+    "four four four anotherNews" auto
+    "five five five foxyFour" auto
+    "five five five newMag" auto
     "foxyFullTwo foxyFullTwo foxyFullTwo foxyFullTwo"
     "pagination pagination pagination calendar"
     "greenBlock greenBlock greenBlock calendar"
@@ -61,7 +60,7 @@
     justify-content: space-between;
     > div:first-child {
       flex: 0 0 30%;
-      span {
+      > span {
         color: rgba(0, 0, 0, 0.38);
         display: inline-block;
       }

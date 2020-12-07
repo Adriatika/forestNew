@@ -1,21 +1,21 @@
 .single {
   margin-bottom: $wrapper-parts-margin;
   display: grid;
-  column-gap: 30px;
-  row-gap: 25px;
+  column-gap: $my-column-gap;
+  row-gap: $my-row-gap;
   align-items: start;
 
   grid-template:
     "breadcrumbs breadcrumbs foxyOne" auto
     "mainImg mainImg foxyOne" auto
     "mainImg mainImg anotherNews" auto
-    "mainImg mainImg foxyTwo" auto
+    "mainImg mainImg anotherNews" auto
+    "mainContent share anotherNews" auto
     "mainContent share foxyTwo" auto
     "mainContent share readers" auto
     "mainContent share foxyThree" auto
     "mainContent share ."
-    "foxyLong foxyLong foxyLong"
-    "comments comments ."
+    "foxyLong foxyLong grade"
     "disqus . ."
     "foxyFullOne foxyFullOne foxyFullOne"
     "sliderOne sliderOne foxyFour"
@@ -25,7 +25,7 @@
   / 7fr 2fr 3fr
     ;
   > .grade {
-    display: none;
+    grid-area: grade;
   }
   .breadcrumbs {
     grid-area: breadcrumbs;
@@ -36,38 +36,51 @@
     padding-left: 15px;
     padding-bottom: 25px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-    &__TextBlc {
-      p {
-        font-weight: 500;
-        font-size: 24px;
+    .imgBlock.imgBlockFull {
+      padding-top: 56.6%;
+      max-width: 800px;
+    }
+    .verticalBlock__TextBlc {
+      max-width: 800px;
+      h1 {
+        font-weight: 500 ;
+        font-size: 24px ;
         line-height: 36px;
       }
     }
     .dateAndViews {
+      max-width: 800px;
       .tags {
         margin-left: 20px;
       }
     }
   }
   &__mainContent {
+    min-width: 0;
     grid-area: mainContent;
     > *:not(.wp-block-image) {
       padding-left: 15px;
     }
+    a {
+      color: $main-color;
+      text-decoration: underline;
+    }
     h2 {
+      border-bottom: 2px solid $main-color;
+    }
+    h2, h2 *{
       font-weight: 500;
       font-size: 24px;
       line-height: 36px;
       padding-bottom: 10px;
       margin-bottom: 30px;
-      border-bottom: 2px solid $main-color;
     }
-    h3 {
+    h3, h3 * {
       font-weight: 500;
       font-size: 20px;
       line-height: 28px;
     }
-    h1 {
+    h1, h1 * {
       font-weight: normal;
       font-size: 34px;
       line-height: 48px;
@@ -90,10 +103,12 @@
       float: left;
     }
     figcaption {
+      color: #9f9f9f;
+    }
+    figcaption, figcaption * {
       font-weight: normal;
       font-size: 14px;
       line-height: 20px;
-      color: #9f9f9f;
       z-index: 2;
       position: relative;
     }
@@ -125,6 +140,10 @@
     }
     .has-text-align-left {
       text-align: left;
+    }
+    em {
+      font-weight: 300;
+      font-size: 16px;
     }
     ul {
       color: black;
@@ -257,6 +276,44 @@
   }
 }
 
+.single.page {
+  grid-template:
+    "breadcrumbs breadcrumbs foxyOne" auto
+    "mainContent . foxyOne" auto
+    "mainContent . anotherNews" auto
+    "mainContent . foxyTwo" auto
+    "mainContent . readers" auto
+    "mainContent . foxyThree" auto
+    "mainContent . ." auto
+    "foxyLong foxyLong foxyLong"
+    "foxyFullOne foxyFullOne foxyFullOne"
+    "sliderOne sliderOne foxyFour"
+    "greenBlock greenBlock ."
+    "part3 part3 part3"
+    "foxyFullTwo foxyFullTwo foxyFullTwo"
+  / 7fr 2fr 3fr
+;
+}
+
+.single.short {
+  grid-template:
+    "breadcrumbs breadcrumbs foxyOne" auto
+    "mainImg mainImg foxyOne" auto
+      "mainImg mainImg anotherNews" auto
+    "mainContent share foxyTwo" auto
+    "mainContent share foxyThree" auto
+    "mainContent share ."
+    "foxyLong foxyLong grade"
+    "disqus . ."
+    "foxyFullOne foxyFullOne foxyFullOne"
+    "sliderOne sliderOne foxyFour"
+    "greenBlock greenBlock ."
+    "part3 part3 part3"
+    "foxyFullTwo foxyFullTwo foxyFullTwo"
+  / 7fr 2fr 3fr
+;
+}
+
 @media (max-width: 1024px) {
   .single {
     grid-template:
@@ -270,7 +327,7 @@
     "mainContent foxyThree" auto
     "mainContent ."
     "foxyLong foxyLong"
-    "comments comments"
+    "grade grade"
     "disqus disqus"
     "foxyFullOne foxyFullOne"
     "sliderOne sliderOne"
@@ -309,7 +366,6 @@
     "mainContent"
     "grade"
     "foxyLong"
-    "comments"
     "foxyOne"
     "anotherNews"
     "foxyTwo"
@@ -326,17 +382,11 @@
         padding-left: 0;
       }
     }
+    .verticalBlockMain {
+      padding-left: 0;
+    }
     .mainPageWrapper-part3 {
       grid-template:  "centerArea lineArea rightArea" auto "foxyArea foxyArea foxyArea"  auto/1fr 1px 1fr;
-    }
-    > .grade {
-      grid-area: grade;
-      display: flex;
-    }
-    .comments {
-      .grade {
-        display: none;
-      }
     }
     .disqus, .readersChoise, .foxyFullOne, .foxyFullTwo {
       display: none;
@@ -346,7 +396,6 @@
 @media all and (max-width: 768px) {
   .single {
     .mainPageWrapper-part3 {
-
       grid-template: "centerArea" auto "rightArea" auto "foxyArea" auto /1fr;
     }
   }

@@ -19,7 +19,6 @@
   }
 
   &__center {
-
     display: flex;
     height: 100%;
     border-radius: 5px;
@@ -39,6 +38,9 @@
           float: right;
           color: rgba(white, .6);
           padding: 3px 15px;
+          &:hover {
+            background-color: transparent;
+          }
         }
       }
       .mainPageWrapper-part1__centerTopText {
@@ -113,11 +115,13 @@
         line-height: 20px;
         margin-bottom: 15px;
         display: flex;
+
       }
       > div {
         display: flex;
         justify-content: space-between;
         span, a {
+          text-align: end;
           font-size: 12px;
           line-height: 16px;
           color: rgba(0, 0, 0, 0.38);
@@ -138,7 +142,7 @@
 
   }
 
-  &__foxyBlock {
+  .foxyLong {
     grid-area: foxyLong;
   }
 
@@ -172,7 +176,7 @@
       display: none;
     }
 
-    &__foxyBlock {
+    .foxyLong {
       flex: 0 0 100%;
       max-width: 100%;
     }
@@ -282,6 +286,14 @@
       &TopLeft {
         a {
           width: auto;
+        }
+      }
+    }
+    &__center {
+      > div {
+        .dateAndViews {
+          display: flex;
+          flex-direction: column;
         }
       }
     }

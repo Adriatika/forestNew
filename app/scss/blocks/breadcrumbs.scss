@@ -12,11 +12,13 @@
       font-size: 14px;
       line-height: 20px;
     }
-    a:not(:last-child) {
+    > span:not(:last-child) {
       color: rgba(0, 0, 0, 0.38);
     }
-    a:last-child {
-      color: rgba(0, 53, 37, 0.87);
+    > span:last-child {
+      span {
+        color: rgba(0, 53, 37, 0.87);
+      }
     }
   }
 }

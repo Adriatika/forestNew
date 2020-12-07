@@ -1,11 +1,15 @@
 .verticalBlock {
+  position: relative;
   .dateAndViews {
     margin-top: 10px;
+  }
+  .tags {
+    margin-left: 0;
   }
   &__ImgBlc {
     .imgBlock {
       position: relative;
-      overflow: initial;
+      overflow: hidden;
     }
     img {
       border-radius: 5px;
@@ -25,9 +29,9 @@
       &:before {
         content: '';
         border: 10px solid $main-color;
-        border-left-color: white;
+        border-left-color: transparent;
         border-radius: 6px 0 0 0;
-        border-bottom-color: white;
+        border-bottom-color: transparent;
         position: absolute;
         top: 0;
         right: 100%;
@@ -51,6 +55,15 @@
     display: block;
     a {
       margin-bottom: 5px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .verticalBlock {
+    &__ImgBlc {
+      span {
+        right: 0;
+      }
     }
   }
 }

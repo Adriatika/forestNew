@@ -1,8 +1,8 @@
 .page404 {
   display: grid;
-  row-gap: 30px;
+  row-gap: $my-row-gap;
   .header404 {
-    column-gap: 30px;
+    column-gap: $my-column-gap;
     display: grid;
     grid-template-columns: 3fr 1fr;
     > div:first-child {
@@ -48,8 +48,8 @@
             background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill-opacity='0.12' viewBox='0 0 24 24' fill-rule='evenodd'%3E%3Cpath d='M14.9649 14.255H15.7549L20.7449 19.255L19.2549 20.745L14.2549 15.755V14.965L13.9849 14.685C12.8449 15.665 11.3649 16.255 9.75488 16.255C6.16488 16.255 3.25488 13.345 3.25488 9.755C3.25488 6.165 6.16488 3.255 9.75488 3.255C13.3449 3.255 16.2549 6.165 16.2549 9.755C16.2549 11.365 15.6649 12.845 14.6849 13.985L14.9649 14.255ZM5.25488 9.755C5.25488 12.245 7.26488 14.255 9.75488 14.255C12.2449 14.255 14.2549 12.245 14.2549 9.755C14.2549 7.26501 12.2449 5.255 9.75488 5.255C7.26488 5.255 5.25488 7.26501 5.25488 9.755Z'%3E%3C/path%3E%3C/svg%3E") center / contain no-repeat;
           }
         }
-
         input {
+          min-height: 54px;
           padding: 0 25% 0 8%;
           height: 100%;
           width: 100%;
@@ -57,6 +57,9 @@
           background: rgba(0, 0, 0, 0.02);
           color: rgba(0, 0, 0, 0.38);
           border-radius: 5px;
+          &::placeholder {
+            line-height: 54px;
+          }
         }
         button {
           position: absolute;
@@ -75,9 +78,7 @@
   /4fr 3fr 2fr 3fr
   ;
   }
-}
-.page404Bot {
-  .mainPageWrapper-part7 {
+  .bigSubForm {
     margin-bottom: 0;
   }
 }
@@ -100,15 +101,19 @@
 @media (max-width: 768px) {
   .page404 {
     .header404 {
-      row-gap: 30px;
+      row-gap: $my-row-gap;
       grid-template-rows: 1fr;
       grid-template-columns: auto;
       &__error {
         flex-direction: column;
         margin-bottom: 40px;
-
         &Right {
           margin-top: 25px;
+          form {
+            &:before {
+              top: 20%;
+            }
+          }
           input {
             padding: 0;
             padding-left: 8%;

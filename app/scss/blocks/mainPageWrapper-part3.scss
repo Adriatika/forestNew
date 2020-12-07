@@ -6,8 +6,10 @@
     / 1fr 2fr 1px 2fr
   ;
 
-  column-gap: 35px;
-
+  column-gap: $my-column-gap;
+  .views {
+    align-items: center;
+  }
   &__line {
     grid-area: lineArea;
     border-right: 1px solid rgba(0, 0, 0, 0.12);
@@ -27,7 +29,9 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-
+        .tags {
+          justify-content: flex-end;
+        }
       }
     }
     a {
@@ -62,8 +66,8 @@
     "centerArea lineArea rightArea" auto
     / 1fr 1px 1fr
   ;
-    row-gap: 30px;
-    column-gap: 25px;
+    row-gap: $my-row-gap;
+    column-gap: $my-column-gap;
     .foxy {
       display: flex;
       margin: auto;

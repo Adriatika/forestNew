@@ -4,6 +4,9 @@
   background: url("img/magBack.png") no-repeat 50%;
   background-size: cover;
   padding: 30px 15px 30px 20px;
+  img {
+    width: 100%;
+  }
   &Inside {
     &Top {
       border-bottom: 1px solid white;
@@ -55,6 +58,7 @@
           position: relative;
           display: flex;
           max-width: 270px;
+          max-height: 370px;
           width: auto;
           margin: 0 auto 20px auto;
           > img {

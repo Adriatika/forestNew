@@ -5,7 +5,7 @@ footer {
     padding: 75px 15px 55px 15px;
     display: grid;
     column-gap: 130px;
-    row-gap: 30px;
+    row-gap: $my-row-gap;
     grid-template:
           "one two three four"
           "five six six six"

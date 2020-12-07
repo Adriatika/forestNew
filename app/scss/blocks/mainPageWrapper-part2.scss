@@ -32,8 +32,8 @@
     padding: 0;
   }
 
-  &__foxy {
-    margin-top: 40px;
+  .foxyFull {
+
     grid-area: bigFoxyArea;
   }
 }
@@ -67,7 +67,7 @@
     "socialArea socialArea socialArea"
       ;
       }
-    &__foxy {
+    .foxyFull {
       margin-top: 0;
     }
   }

@@ -12,8 +12,10 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
+    flex: 0 0 70%;
   }
   &__Date {
+    text-align: end;
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;

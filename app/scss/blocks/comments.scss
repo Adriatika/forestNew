@@ -1,15 +1,27 @@
 .comments {
+  position: relative;
   &__radio {
     display: none;
   }
+  .socialMedia {
+    a {
+      margin: 0;
+    }
+  }
   &__commentTab {
+    cursor: pointer;
+    margin-top: 54px;
     border-radius: 5px;
     border: 2px solid $main-color;
   }
   #blockVk, #blockFb {
     display: none;
+    > div {
+      padding: 15px;
+    }
   }
   label {
+    position: absolute;
     background-color: rgba(0, 0, 0, 0.05);;
     color: rgba(0, 0, 0, 0.38);
     font-size: 16px;
@@ -19,13 +31,65 @@
     border-radius: 5px 5px 0 0;
   }
   label:first-of-type {
-    margin-left: 20px;
+    left: 20px;
   }
+  label:last-of-type {
+    left: 220px;
+  }
+
   #fbComment:checked ~ div#blockFb, #vkComment:checked ~ div#blockVk {
     display: block;
   }
   #fbComment:checked ~ .comments__fb, #vkComment:checked ~ .comments__vk {
     background-color: $main-color;
     color: white;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .comments {
+    &__commentTab {
+      margin-top: 0;
+    }
+    label {
+      position: initial;
+      display: inline-flex;
+      max-width: 50%;
+    }
+    label:first-of-type {
+      margin-left: 20px;
+    }
+    .grade {
+      position: initial;
+      margin-left: 0;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: center;
+      .socialMedia {
+        width: auto;
+        .thumbs-rating-already-voted {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 576px) {
+  .comments {
+    &__commentTab {
+      border-radius: 0 0 5px 5px;
+    }
+    label {
+      display: flex;
+      max-width: 100%;
+      justify-content: center;
+    }
+    label:first-of-type {
+      margin-left: 0;
+    }
+    label:last-of-type {
+      border-radius: 0;
+    }
   }
 }

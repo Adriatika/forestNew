@@ -69,6 +69,7 @@
             position: relative;
             display: flex;
             max-width: 270px;
+            max-height: 370px;
             width: auto;
             margin: 0 auto 20px auto;
             > img {
@@ -142,6 +143,7 @@
                 flex-direction: column;
                 margin: auto 0;
                 p {
+                  margin-top: 0;
                   font-weight: 500;
                   font-size: 16px;
                   line-height: 24px;
@@ -174,6 +176,9 @@
     grid-area: mobileArea;
     display: none;
   }
+  img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -199,6 +204,10 @@
     &__left {
       &Inside {
         &Top {
+          span:first-of-type {
+            flex: 0 0 100%;
+            max-width: initial;
+          }
           span:last-of-type {
             display: none;
           }

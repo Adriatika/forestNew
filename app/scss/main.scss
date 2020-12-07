@@ -1,6 +1,8 @@
 @import "blocks/vars";
 //@import "bootstrap/scss/bootstrap";
-
+*:focus {
+  outline: none;
+}
 .container {
   max-width: 1310px;
   width: 100%;
@@ -8,6 +10,12 @@
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+@media (max-width: 330px) {
+  .container {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
 }
 
 a {
@@ -23,7 +31,7 @@ a {
 }
 
 img {
-  width: 100%;
+  //width: 100%;
   height: auto;
 }
 
@@ -46,7 +54,7 @@ body {
 *,
 *::before,
 *::after {
-  box-sizing: border-box; // 1
+  box-sizing: border-box;
 }
 
 
@@ -57,7 +65,7 @@ body {
 @import "blocks/mainPageWrapper-part4";
 @import "blocks/mainPageWrapper-part5";
 @import "blocks/mainPageWrapper-part6";
-@import "blocks/mainPageWrapper-part7";
+@import "blocks/bigSubForm";
 @import "blocks/partnersSlider";
 @import "blocks/mainPageWrapper-part9";
 @import "blocks/readersChoise";
@@ -71,7 +79,6 @@ body {
 @import "blocks/rubricator";
 @import "blocks/button";
 @import "blocks/socialBlock";
-@import "blocks/inputBlock";
 @import "blocks/arrowSwitch";
 @import "blocks/greenBlock";
 @import "blocks/sliderMini";
@@ -94,4 +101,7 @@ body {
 @import "blocks/footer";
 @import "blocks/comments";
 @import "blocks/grade";
+@import "blocks/magArchive";
+@import "blocks/newsOfHour";
 @import "blocks/single";
+@import "blocks/issue";
