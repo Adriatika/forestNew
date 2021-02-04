@@ -1,0 +1,39 @@
+.writer {
+  text-align: start;
+  margin: 40px -15px 0 0;
+  position: relative;
+  padding: 10px 40px;
+  border-radius: 0 5px 5px 5px;
+  border: 2px solid #e0e0e0;
+  span, a {
+    font-size: 15px;
+  }
+  &:after {
+    content: '';
+    border: 15px solid #e0e0e0;
+    border-right-color: transparent;
+    border-radius: 0 0 10px 0;
+    border-top-color: transparent;
+    position: absolute;
+    bottom: 100%;
+    left: -2px;
+    z-index: 1;
+  }
+  &:before {
+    content: '';
+    border: 13px solid white;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    position: absolute;
+    bottom: 99%;
+    left: 0;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 1024px) {
+  .writer {
+    padding: 10px 20px 10px 20px !important;
+    margin: 30px 0 0 0;
+  }
+}

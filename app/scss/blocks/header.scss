@@ -359,13 +359,16 @@ header {
         }
       }
       flex-direction: column;
-      order: 2;
+
+    }
+    .hiddenMenu {
+      order: 3;
     }
     .socialMedia {
       a {
         max-height: 39px;
       }
-      order: 3;
+      order: 4;
     }
     form {
       border-top: 1px solid rgba(0, 0, 0, 0.12);
@@ -380,7 +383,11 @@ header {
       }
     }
     .navbar-nav {
-      display: none;
+      flex-direction: column;
+      padding: 0;
+      order: 2;
+      border-bottom: 1px solid rgba(0,0,0,.12);
+      margin-bottom: 10px;
     }
   }
   .menu {

@@ -29,7 +29,7 @@
   .magazine{
     display: grid;
     gap: $my-column-gap;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(262px, 1fr));
 
     &__img {
       max-width: 250px;
@@ -75,10 +75,10 @@
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .magArchive {
     .magazine {
-      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
     }
   }
 }
@@ -103,17 +103,9 @@
     / 1fr
   ;
     .magazine {
-      justify-items: center;
       &__item {
         transform: scale(1);
       }
-    }
-  }
-}
-@media (max-width: 360px) {
-  .magArchive {
-    .magazine {
-      grid-template-columns: repeat(1, 1fr);
     }
   }
 }

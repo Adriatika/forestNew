@@ -4,6 +4,7 @@
     padding-bottom: 5px;
     margin-bottom: 8px;
     > a, > div {
+      transition-duration: .1s;
       display: flex;
       flex-direction: row;
       .horizontalBarFirst {
@@ -17,6 +18,7 @@
          margin-right: 11px;
        }
        .horizontalBar__Right {
+         transition-duration: .3s;
          display: flex;
          flex-direction: column;
          justify-content: space-between;
@@ -26,12 +28,14 @@
       border-radius: 5px;
     }
     span {
+      transition-duration: .1s;
       font-weight: 500;
       display: flex;
       align-items: center;
     }
   }
   &__Right > a{
+    transition-duration: .1s;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -40,6 +44,8 @@
     margin-bottom: 0 !important;
   }
 }
+
+
 
 @media (max-width: 576px) {
   .horizontalBar {

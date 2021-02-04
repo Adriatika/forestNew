@@ -1,6 +1,6 @@
 .socialMedia {
   max-height: 80px;
-  width: 173px;
+  width: 39px * 4;
   display: flex;
   align-content: center;
   margin: 15px 0;
@@ -12,8 +12,7 @@
   }
   svg {
     color: $main-color;
-    width: 100%;
-    max-width: 27px;
+    width: 27px;
     max-height: 27px;
     margin-right: 12px;
     &:hover {

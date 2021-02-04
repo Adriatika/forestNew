@@ -4,8 +4,10 @@
   column-gap: $my-column-gap;
   row-gap: $my-row-gap;
   align-items: start;
+  overflow-anchor: none;
   grid-template:
     "breadcrumbs breadcrumbs breadcrumbs foxyOne"
+    "filter filter filter foxyOne"
     "one one one foxyOne"
     "one one one anotherNews"
     "one one one foxyTwo"
@@ -23,6 +25,9 @@
     "foxyFullTwo foxyFullTwo foxyFullTwo foxyFullTwo"
     / 1fr 1fr 1fr 1fr
 ;
+  .filter {
+    grid-area: filter;
+  }
   > .horizontalBar {
     .imgBlock {
       flex: 0 0 19%;
@@ -229,6 +234,7 @@
   .rubric {
     grid-template:
     "breadcrumbs"
+    "filter"
     "one"
     "foxyOne"
     "anotherNews"

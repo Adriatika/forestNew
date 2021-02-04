@@ -4,7 +4,6 @@
     "zero zero zero foxyOne"
     "one one one anotherNews"
     "one one one foxyTwo"
-    "sliderBigOne sliderBigOne sliderBigOne sliderBigOne"
     "foxyFullOne foxyFullOne foxyFullOne foxyFullOne"
     "two two two foxyThree"
     "two two two newMag"
@@ -14,7 +13,7 @@
     "four four four foxyFive"
     "loadmore loadmore loadmore ."
     "foxyLong foxyLong foxyLong foxyLong"
-    "sliderOne sliderOne sliderOne ."
+    "sliderBigOne sliderBigOne sliderBigOne sliderBigOne"
     "foxyFullTwo foxyFullTwo foxyFullTwo foxyFullTwo"
     / 1fr 1fr 1fr 1fr
 ;
@@ -61,7 +60,6 @@
     "foxyOne"
     "anotherNews"
     "foxyTwo"
-    "sliderBigOne"
     "foxyFullOne"
     "two"
     "three"
@@ -73,22 +71,45 @@
     "newMag"
     "foxyFour"
     "foxyLong"
-    "sliderOne"
+    "sliderBigOne"
     "foxyFive"
     / 1fr
   ;
     .horizontalBar.horizontalBarIssue {
+      > div > div {
+        .imgBlock {
+          margin: auto !important;
+        }
+        flex-direction: column;
+      }
       .horizontalBar__Right {
         .h2Title {
           display: none;
         }
       }
     }
-    .horizontalBar1 > div:first-child .imgBlock {
-      flex: 0 0 100%;
-      max-width: 100%;
-      padding-top: 76.6%;
-      margin-right: 0;
+    .horizontalBar1 > div:first-child {
+      > div {
+        flex-direction: row;
+      }
+      .imgBlock {
+        flex: 0 0 19%;
+        max-width: 19%;
+        padding-top: 14.6%;
+        margin-right: 11px;
+      }
+      .horizontalBar__Right {
+        > a:first-child {
+          margin-top: 0;
+          margin-right: 30px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+        }
+        > a:last-of-type {
+          display: none;
+        }
+      }
     }
   }
 }

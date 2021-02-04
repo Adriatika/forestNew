@@ -4,6 +4,7 @@
   column-gap: $my-column-gap;
   row-gap: $my-row-gap;
   align-items: start;
+  overflow-anchor: none;
 
   grid-template:
     "breadcrumbs breadcrumbs foxyOne" auto
@@ -14,10 +15,9 @@
     "mainContent share foxyTwo" auto
     "mainContent share readers" auto
     "mainContent share foxyThree" auto
-    "mainContent share ."
-    "foxyLong foxyLong grade"
+    "mainContent share ." auto
+    ". . grade"
     "disqus . ."
-    "addi addi addi"
     "foxyFullOne foxyFullOne foxyFullOne"
     "sliderOne sliderOne foxyFour"
     "greenBlock greenBlock ."
@@ -38,7 +38,7 @@
     padding-bottom: 25px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     .imgBlock.imgBlockFull {
-      padding-top: 56.6%;
+      padding-top: 66.6%;
       max-width: 800px;
     }
     .verticalBlock__TextBlc {
@@ -96,8 +96,7 @@
       max-width: 250px;
     }
     .alignright {
-      margin-left: 30px;
-      float: right;
+      margin-right: 1em !important;
     }
     .alignleft {
       margin-right: 30px;
@@ -133,6 +132,7 @@
       }
 
     }
+
     .has-text-align-center {
       text-align: center;
     }
@@ -155,7 +155,7 @@
     }
     blockquote {
       border-radius: 0 5px 5px 5px;
-      margin-left: 15px;
+      margin:  0 0 0 15px;
       padding: 40px 45px !important;
       position: relative;
       background: rgba($main-color, 0.38);
@@ -169,9 +169,15 @@
         top: 0;
         right: 100%;
       }
+      & + blockquote {
+        margin-top: 15px;
+      }
     }
     .wp-block-table {
       overflow-x: auto;
+    }
+    .article-loaded {
+      padding-top: 60px;
     }
   }
 
@@ -185,7 +191,6 @@
     grid-area: share;
     height: 100%;
     > div {
-
       position: sticky;
       top: 25px;
     }
@@ -194,8 +199,17 @@
       padding: 25px 0;
       border-radius: 5px;
       margin-bottom: 25px;
-
-      span {
+      flex-wrap: wrap;
+      row-gap: 15px;
+      &__me {
+        padding: 0 10px;
+        display: inline-block !important;
+        margin-bottom: 15px;
+        a {
+          color: $main-color;
+        }
+      }
+      span, a {
         display: flex;
         justify-content: center;
         font-size: 14px;
@@ -240,6 +254,7 @@
   }
   .foxyThree {
     grid-area: foxyThree;
+    //grid-row-start: 8;
   }
   .foxyFour {
     grid-area: foxyFour;
@@ -253,6 +268,7 @@
   }
 
   .foxyLong {
+    padding: 30px 0 0 0 !important;
     grid-area: foxyLong;
   }
 
@@ -330,7 +346,6 @@
     "foxyLong foxyLong"
     "grade grade"
     "disqus disqus"
-    "addi addi"
     "foxyFullOne foxyFullOne"
     "sliderOne sliderOne"
     "foxyFour foxyFour"
@@ -357,18 +372,38 @@
       display: none;
     }
   }
+
 }
 
 @media (max-width: 992px) {
+  .single.page {
+    grid-template:
+    "breadcrumbs"
+    "mainContent"
+    "foxyOne"
+    "anotherNews"
+    "foxyTwo"
+    "readers"
+    "foxyThree"
+    "foxyLong"
+    "foxyFullOne"
+    "sliderOne"
+    "foxyFour"
+    "greenBlock"
+    "part3"
+    "foxyFullTwo"
+  / 1fr
+  ;
+  }
   .single {
     grid-template:
     "breadcrumbs"
     "mainImg"
     "share"
     "mainContent"
+    "foxyFullOne"
     "grade"
     "foxyLong"
-    "addi"
     "foxyOne"
     "anotherNews"
     "foxyTwo"
@@ -377,29 +412,29 @@
     "greenBlock"
     "foxyFour"
     "part3"
+    "foxyFullTwo"
   / 1fr
   ;
+    .mainPageWrapper-part3 {
+      grid-template:
+    "centerArea" auto
+    "foxyArea" auto
+    "rightArea" auto
+    /1fr;
+      margin-bottom: 0;
+    }
     &__mainContent {
       overflow-x: auto;
-      > *:not(.wp-block-image) {
+      > *:not(.wp-block-image, .has-background) {
         padding-left: 0;
       }
     }
     .verticalBlockMain {
       padding-left: 0;
     }
-    .mainPageWrapper-part3 {
-      grid-template:  "centerArea lineArea rightArea" auto "foxyArea foxyArea foxyArea"  auto/1fr 1px 1fr;
-    }
-    .disqus, .readersChoise, .foxyFullOne, .foxyFullTwo {
+    .disqus, .readersChoise {
       display: none;
     }
   }
 }
-@media all and (max-width: 768px) {
-  .single {
-    .mainPageWrapper-part3 {
-      grid-template: "centerArea" auto "rightArea" auto "foxyArea" auto /1fr;
-    }
-  }
-}
+

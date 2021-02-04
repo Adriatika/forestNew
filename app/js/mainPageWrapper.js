@@ -206,7 +206,7 @@ function closeModal() {
 let arrowUp= ''
 let getArrowUpObj = {
 	on: function () {
-		arrowUp.style.display = 'block'
+		arrowUp.style.display = 'flex'
 		setTimeout(() =>arrowUp.classList.add('visible'), 500)
 	},
 	off: function () {

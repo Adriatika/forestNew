@@ -53,6 +53,10 @@
         letter-spacing: 1.5px;
         text-transform: uppercase;
         color: rgba(0, 53, 37, 0.87);
+        &:hover {
+          color: $main-color;
+          transition-duration: .1s;
+        }
       }
     }
   }

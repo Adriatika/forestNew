@@ -2,12 +2,20 @@
   min-width: 0;
   //margin-top: $mainPageWrapper__slider;
   .swiper-slide {
+    > a:hover + div {
+     .movingPicturesTitle {
+       color: $main-color;
+     }
+    }
     > a {
       position: relative;
       img {
         border-radius: 5px;
         margin-bottom: 10px;
       }
+    }
+    .imgBlock:hover {
+      filter: grayscale(0.7);
     }
   }
 
@@ -61,7 +69,11 @@
         border-radius: 0 5px 5px 0;
       }
     }
+    &Right {
 
+        margin-left: auto;
+
+    }
   }
 }
 @media (max-width: 576px) {

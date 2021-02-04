@@ -1,6 +1,8 @@
 .listedUp {
   display: none;
   opacity: 0;
+  flex-direction: column;
+  align-items: center;
   overflow: hidden;
   cursor: pointer;
   position: fixed;
@@ -13,8 +15,8 @@
   z-index: 3;
   color: white;
   svg {
-    margin: auto;
-    display: flex;
+    position: relative;
+    top: 12%;
     height: 100%;
   }
   &:hover {
@@ -22,10 +24,11 @@
     color: rgba(0, 53, 37, 0.87);
     padding-top: 9px;
     svg {
+      top: 0;
       height: 32px;
     }
     span {
-      display: flex;
+      opacity: 1;
     }
   }
   &:active {
@@ -42,9 +45,8 @@
   span {
     font-size: 12px;
     line-height: 16px;
-    display: none;
+    opacity: 0;
     width: max-content;
-    margin: auto;
   }
 }
 

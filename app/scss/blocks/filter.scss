@@ -1,0 +1,75 @@
+.filter {
+  border-bottom: 2px solid rgba(0,53,37,.87);
+
+  .h2Title {
+    max-width: max-content;
+    cursor: pointer;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size:14px;
+    &:after {
+      content: '';
+      background-image: url("img/arrowToggleDown2.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      left: 110%;
+      top: 25%;
+      transform: rotate(180deg);
+    }
+    &.closed {
+      &:after {
+        top: 45%;
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &__hide {
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__all {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 5px;
+    column-gap: 20px;
+    margin: 20px 0;
+    span {
+      padding: 5px 0;
+      cursor: pointer;
+      position: relative;
+      max-width: max-content;
+      &.added {
+        color: $main-color;
+        &:after {
+          content: '';
+          background-image: url("img/close.svg");
+          background-size: contain;
+          width: 15px;
+          height: 15px;
+          position: absolute;
+          left: 110%;
+          top: 25%;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 576px) {
+  .filter {
+    .h2Title {
+      padding-left: 0;
+    }
+    &__all {
+      grid-template-columns: auto;
+    }
+  }
+}

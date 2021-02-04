@@ -41,8 +41,8 @@ function styles() {
       cleancss({ level: { 1: { specialComments: 0 } }, /*format: "beautify"*/ })
     )
     .pipe(dest('app/html'))
-    // .pipe(dest("C:\\xampp\\htdocs\\lesk\\wp-content\\themes\\forest"))
-	.pipe(dest('C:\\xampp5.6\\htdocs\\lesk\\wp-content\\themes\\forest'))
+    .pipe(dest("C:\\xampp\\htdocs\\lesk\\wp-content\\themes\\forest"))
+	// .pipe(dest('C:\\xampp5.6\\htdocs\\lesk\\wp-content\\themes\\forest'))
     .pipe(browserSync.stream());
 }
 
@@ -52,7 +52,8 @@ function scripts() {
     .pipe(concat("app.min.js"))
     .pipe(uglify())
     .pipe(dest("app/html/js/"))
-    .pipe(dest("C:\\xampp5.6\\htdocs\\lesk\\wp-content\\themes\\forest\\js"))
+    // .pipe(dest("C:\\xampp5.6\\htdocs\\lesk\\wp-content\\themes\\forest\\js"))
+    .pipe(dest("C:\\xampp\\htdocs\\lesk\\wp-content\\themes\\forest\\js"))
     .pipe(browserSync.stream());
 }
 

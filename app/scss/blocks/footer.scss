@@ -9,6 +9,7 @@ footer {
     grid-template:
           "one two three four"
           "five six six six"
+          "seven seven seven seven"
   /1.5fr 1fr 1.5fr 1fr
   ;
     li:not(:last-of-type) {
@@ -16,6 +17,13 @@ footer {
     }
     li {
       list-style: none;
+    }
+    span {
+      margin-top: auto;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      color: rgba(0, 0, 0, 0.38);
     }
     a {
       font-weight: 500;
@@ -111,6 +119,16 @@ footer {
       }
       grid-area: six;
     }
+    &__seven {
+      grid-area: seven;
+      a {
+        color: $main_color;
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        text-transform: inherit;
+      }
+    }
   }
 }
 
@@ -124,6 +142,7 @@ footer {
           "four"
           "five"
           "six"
+          "seven"
   /1fr
     ;
       .logo {
