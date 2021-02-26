@@ -13,8 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => but.style.display = 'none', 500)
 
         block.classList.add('expanded')
-
-
     }
 
     let expandBut = document.querySelector('.header__topButtons > span:first-child')
@@ -35,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             but.style.display = 'block'
             setTimeout(() => but.style.opacity = '1', 100)
 
-            makeHeight(document.documentElement.clientWidth)
+            makeHeight()
         } else {
             block.classList.add('collapsed')
             setTimeout(() => top.classList.add('release'), 100)
@@ -58,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         block.classList.remove('collapsed')
         localStorage.removeItem('topCollapsed')
 
-        makeHeight(document.documentElement.clientWidth)
+        makeHeight()
 
         setTimeout(expand, 200)
     }
@@ -84,11 +82,12 @@ function editBackgroundImage() {
     } else {
         blc.style.backgroundImage = `url('${mob}')`
     }
-    makeHeight(width)
+    makeHeight()
 }
 
-function makeHeight(width) {
+function makeHeight() {
     let blc2 = document.querySelector('.header__container')
+    let width = document.documentElement.clientWidth;
     if(!blc2.classList.contains('collapsed')) {
         if (width >= 577) {
             if(!blc2.classList.contains('collapsed')) {
@@ -105,3 +104,8 @@ function makeHeight(width) {
 }
 
 editBackgroundImage()
+
+window.addEventListener("orientationchange", function () {
+    setTimeout(editBackgroundImage, 100)
+    setTimeout(makeHeight, 150)
+});
