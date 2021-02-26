@@ -59,6 +59,7 @@ body {
 
 
 @import "blocks/header";
+@import "blocks/header__container";
 @import "blocks/mainPageWrapper-part1";
 @import "blocks/mainPageWrapper-part2";
 @import "blocks/mainPageWrapper-part3";
@@ -74,6 +75,7 @@ body {
 @import "blocks/movingPictures";
 @import "blocks/modalSubscription";
 @import "blocks/rubric";
+@import "blocks/expert";
 @import "blocks/404";
 @import "blocks/loadmore";
 @import "blocks/rubricator";
@@ -86,6 +88,7 @@ body {
 @import "blocks/horizontalBar";
 @import "blocks/categoryBlock";
 @import "blocks/anotherNews";
+@import "blocks/expert-block";
 @import "blocks/foxy";
 @import "blocks/news";
 @import "blocks/quiz";

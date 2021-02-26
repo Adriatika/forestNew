@@ -6,6 +6,12 @@
   .tags {
     margin-left: 0;
   }
+  &:hover {
+    .verticalBlock__TextBlcRead {
+      color: $main-color;
+      border-bottom-color: $main-color;
+    }
+  }
   &__ImgBlc {
     .imgBlock {
       position: relative;
@@ -45,10 +51,15 @@
       font-size: 20px;
       line-height: 28px;
     }
-    p:last-child {
+    p:not(:first-child) {
       font-weight: normal;
       font-size: 14px;
       line-height: 20px;
+    }
+    &Read {
+      border-bottom: 1px solid black;
+      line-height: 14px;
+      float: right;
     }
   }
   .tags {
@@ -57,6 +68,7 @@
       margin-bottom: 5px;
     }
   }
+
 }
 @media (max-width: 576px) {
   .verticalBlock {

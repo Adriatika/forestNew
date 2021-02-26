@@ -19,6 +19,7 @@
           display: flex;
           justify-content: space-between;
           margin-bottom: 20px;
+          align-items: flex-start;
           > div {
             flex: 0 0 47%;
             color: rgba(0, 53, 37, 0.87);
@@ -27,7 +28,7 @@
             border-radius: 50%;
             padding-top: 46.6%;
             img {
-              width: auto;
+              //width: auto;
             }
           }
           > div:last-child {

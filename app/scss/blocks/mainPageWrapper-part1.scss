@@ -31,7 +31,7 @@
     display: flex;
     height: 100%;
     border-radius: 5px;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat !important;
     &:hover{
       text-decoration: none;
       .mainPageWrapper-part1__centerTopText {

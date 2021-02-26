@@ -15,6 +15,8 @@
     "mainContent share foxyTwo" auto
     "mainContent share readers" auto
     "mainContent share foxyThree" auto
+    "mainContent share stickyPost" auto
+    "mainContent share last" auto
     "mainContent share ." auto
     ". . grade"
     "disqus . ."
@@ -30,6 +32,33 @@
   }
   .breadcrumbs {
     grid-area: breadcrumbs;
+  }
+
+  .last {
+    grid-area: last;
+  }
+  .verticalBlock1 {
+    grid-area: stickyPost;
+    border: 1px solid $main-color;
+    padding: 10px;
+    border-radius: 5px;
+    img {
+      filter: brightness(65%);
+    }
+    .verticalBlock__TextBlc:hover {
+      color: unset;
+    }
+    .tags {
+      position: absolute;
+      top: 13px;
+      left: 15px;
+      a {
+        color: white;
+      }
+    }
+    &.foxySticky {
+      top: 300px;
+    }
   }
 
   .verticalBlockMain {
@@ -113,7 +142,8 @@
       position: relative;
     }
     strong {
-      font-weight: bold;
+      //font-family: "Roboto Bold", sans-serif;
+      //font-weight: bold;
     }
     table {
       tbody {
@@ -143,7 +173,7 @@
       text-align: left;
     }
     em {
-      font-weight: 300;
+      font-weight: 400;
       font-size: 16px;
     }
     ul {
@@ -301,6 +331,8 @@
     "mainContent . foxyTwo" auto
     "mainContent . readers" auto
     "mainContent . foxyThree" auto
+    "mainContent . stickyPost" auto
+    "mainContent . last" auto
     "mainContent . ." auto
     "foxyLong foxyLong foxyLong"
     "foxyFullOne foxyFullOne foxyFullOne"
@@ -312,24 +344,6 @@
 ;
 }
 
-.single.short {
-  grid-template:
-    "breadcrumbs breadcrumbs foxyOne" auto
-    "mainImg mainImg foxyOne" auto
-      "mainImg mainImg anotherNews" auto
-    "mainContent share foxyTwo" auto
-    "mainContent share foxyThree" auto
-    "mainContent share ."
-    "foxyLong foxyLong grade"
-    "disqus . ."
-    "foxyFullOne foxyFullOne foxyFullOne"
-    "sliderOne sliderOne foxyFour"
-    "greenBlock greenBlock ."
-    "part3 part3 part3"
-    "foxyFullTwo foxyFullTwo foxyFullTwo"
-  / 7fr 2fr 3fr
-;
-}
 
 @media (max-width: 1024px) {
   .single {
@@ -342,6 +356,8 @@
     "mainContent foxyTwo" auto
     "mainContent readers" auto
     "mainContent foxyThree" auto
+    "mainContent stickyPost" auto
+    "mainContent last" 0px
     "mainContent ."
     "foxyLong foxyLong"
     "grade grade"
@@ -415,6 +431,7 @@
     "foxyFullTwo"
   / 1fr
   ;
+
     .mainPageWrapper-part3 {
       grid-template:
     "centerArea" auto
@@ -432,7 +449,7 @@
     .verticalBlockMain {
       padding-left: 0;
     }
-    .disqus, .readersChoise {
+    .disqus, .readersChoise, .last, .verticalBlock1 {
       display: none;
     }
   }

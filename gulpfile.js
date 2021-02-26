@@ -36,7 +36,6 @@ function styles() {
   return src(["app/" + preprocessor + "**/*"]/*, "node_modules/bootstrap/scss/bootstrap.scss"]*/)
     .pipe(eval(preprocessor)())
     .pipe(concat("style.css")) //имя
-    .pipe(autoprefixer({ overrideBrowserslist: ["last 10 versions"] }))
     .pipe(
       cleancss({ level: { 1: { specialComments: 0 } }, /*format: "beautify"*/ })
     )
