@@ -11,7 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         bot.style.marginTop = `${hiddenHeight + 30}px`;
         but.style.opacity = '0';
         setTimeout(() => but.style.display = 'none', 500)
+
         block.classList.add('expanded')
+
+
     }
 
     let expandBut = document.querySelector('.header__topButtons > span:first-child')
@@ -31,10 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
             let but = document.querySelector('.header__topButtons span:first-child')
             but.style.display = 'block'
             setTimeout(() => but.style.opacity = '1', 100)
+
+            makeHeight(document.documentElement.clientWidth)
         } else {
             block.classList.add('collapsed')
             setTimeout(() => top.classList.add('release'), 100)
             localStorage.setItem('topCollapsed', 'true')
+
+            block.style.height = '50px';
         }
     }
 
@@ -50,6 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let block = document.querySelector('.header__container')
         block.classList.remove('collapsed')
         localStorage.removeItem('topCollapsed')
+
+        makeHeight(document.documentElement.clientWidth)
 
         setTimeout(expand, 200)
     }
@@ -68,10 +77,30 @@ function editBackgroundImage() {
     let set = blc.dataset.srcSet.split(',')
     let desk =  set[0]
     let mob = set[1]
-    if (document.documentElement.clientWidth >= 1023) {
+    let width = document.documentElement.clientWidth
+
+    if (width >= 577) {
         blc.style.backgroundImage = `url('${desk}')`
     } else {
         blc.style.backgroundImage = `url('${mob}')`
+    }
+    makeHeight(width)
+}
+
+function makeHeight(width) {
+    let blc2 = document.querySelector('.header__container')
+    if(!blc2.classList.contains('collapsed')) {
+        if (width >= 577) {
+            if(!blc2.classList.contains('collapsed')) {
+                let heightOfImg = (width / 2000) * 220;
+                blc2.style.height = `${heightOfImg}px`
+            }
+        } else {
+            if(!blc2.classList.contains('collapsed')) {
+                let heightOfImg = (width / 576) * 100;
+                blc2.style.height = `${heightOfImg}px`
+            }
+        }
     }
 }
 
