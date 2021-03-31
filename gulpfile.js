@@ -47,11 +47,12 @@ function styles() {
 
 function scripts() {
   // обновление при изменении js
-  return src(["app/js/**/*"])
+  return src(["app/js/**/*.js"], {
+    ignore: 'app/js/**/*.min.js'
+  })
     .pipe(concat("app.min.js"))
     .pipe(uglify())
     .pipe(dest("app/html/js/"))
-    // .pipe(dest("C:\\xampp5.6\\htdocs\\lesk\\wp-content\\themes\\forest\\js"))
     .pipe(dest("C:\\xampp\\htdocs\\lesk\\wp-content\\themes\\forest\\js"))
     .pipe(browserSync.stream());
 }

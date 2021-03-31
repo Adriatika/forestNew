@@ -1,0 +1,74 @@
+.bottomFixedBlock {
+  position: fixed;
+  border-top:1px solid #38ad4a;
+  bottom: 0;
+  z-index: 3;
+  background-color: white;
+  width: 100%;
+  display: none;
+  padding: 3vh 0;
+  opacity: 0;
+  &.visible {
+    opacity: 1;
+  }
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    span {
+      font-weight: 600;
+      font-size: 180%;
+    }
+
+  }
+  &__collapse {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    top: 0;
+    z-index: 4;
+    right: 0;
+    padding: 5px 10px;
+    color: #C6C6C6;
+    font-weight: bold;
+    font-size: 10px;
+    &:before {
+      position: relative;
+      top: -2px;
+      margin-right: 5px;
+      content: '';
+      width: 20px;
+      height: 20px;
+      background: url("img/closeNew.svg") no-repeat;
+      background-size: cover;
+      display: inline-block;
+    }
+  }
+  &.hidden {
+    bottom: -100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .bottomFixedBlock {
+    padding: 3vh 5px;
+    &__text {
+      span {
+        font-size: 85%;
+      }
+    }
+
+    &__collapse {
+      top: unset;
+      bottom: 0;
+      padding: 0 10px;
+      &:before {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
