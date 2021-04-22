@@ -12,7 +12,7 @@ function extend() {
 
 function scrollWatch() {
   arrow = document.querySelector('.mainPageWrapper-part1__rightArrowDown')
-  blc.addEventListener('wheel', check)
+  blc.addEventListener('wheel', check, {passive: true})
 }
 
 function check(event) {

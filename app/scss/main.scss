@@ -1,5 +1,13 @@
 @import "blocks/vars";
 //@import "bootstrap/scss/bootstrap";
+@mixin crapie() {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+
+
 *:focus {
   outline: none;
 }
@@ -55,6 +63,10 @@ body {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+br {
+  line-height: inherit;
 }
 
 
@@ -113,4 +125,5 @@ body {
 @import "blocks/issue";
 @import "blocks/additionalBlock";
 @import "blocks/writer";
+@import "blocks/forms";
 @import "blocks/sp-form";

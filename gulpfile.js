@@ -33,7 +33,7 @@ function cleandist() {
 
 function styles() {
   // из сасс/лесс в ксс
-  return src(["app/" + preprocessor + "**/*"]/*, "node_modules/bootstrap/scss/bootstrap.scss"]*/)
+  return src(["app/" + preprocessor + "**/*"])
     .pipe(eval(preprocessor)())
     .pipe(concat("style.css")) //имя
     .pipe(
@@ -41,7 +41,9 @@ function styles() {
     )
     .pipe(dest('app/html'))
     .pipe(dest("C:\\xampp\\htdocs\\lesk\\wp-content\\themes\\forest"))
-	// .pipe(dest('C:\\xampp5.6\\htdocs\\lesk\\wp-content\\themes\\forest'))
+      .pipe(autoprefixer({grid: "autoplace", flexbox: true}))
+      .pipe(concat("styleIE.css"))
+      .pipe(dest("C:\\xampp\\htdocs\\lesk\\wp-content\\themes\\forest\\style"))
     .pipe(browserSync.stream());
 }
 

@@ -11,7 +11,7 @@ let bottomBlock = {
         if(opt) {
             let func = this.onScroll.bind(bottomBlock)
             let click = this.buttonClick.bind(bottomBlock)
-            document.addEventListener('scroll', func)
+            document.addEventListener('scroll', func, {passive: true})
             this.button.addEventListener('click', click)
             setTimeout(this.bottomMargin(), 1000)
 
