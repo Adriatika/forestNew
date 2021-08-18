@@ -67,7 +67,7 @@
     padding-bottom: 25px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     .imgBlock.imgBlockFull {
-      padding-top: 66.6%;
+      padding-top: 64.6%;
       max-width: 800px;
     }
     .verticalBlock__TextBlc {
@@ -83,6 +83,13 @@
       .tags {
         margin-left: 20px;
       }
+    }
+    .sign {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      color: #9f9f9f;
+      word-break: break-word;
     }
   }
   &__mainContent {
@@ -448,6 +455,9 @@
     }
     .verticalBlockMain {
       padding-left: 0;
+      .imgBlock.imgBlockFull {
+        padding-top: 75.6%;
+      }
     }
     .disqus, .readersChoise, .last, .verticalBlock1 {
       display: none;
